@@ -33,8 +33,8 @@ export function Footer() {
               Tiny Sports
             </Link>
             <p className="text-muted-foreground mt-3 text-sm">
-              Helping Australian community sports clubs thrive through grant
-              writing, brand development, and capacity building.
+              Helping Australian grassroots sports clubs and independent coaches
+              access government grants and build sustainable programs.
             </p>
             <div className="text-muted-foreground mt-4 flex flex-col gap-2 text-sm">
               <a
@@ -114,10 +114,10 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-muted-foreground text-xs">
-            &copy; {new Date().getFullYear()} Tiny Sports. Not-for-profit
-            organisation.
+            &copy; {new Date().getFullYear()} Tiny Sports Limited. Not-for-profit
+            Company Limited by Guarantee. ACN pending registration.
           </p>
-          <p className="text-muted-foreground text-xs">ABN: Coming Soon</p>
+          <p className="text-muted-foreground text-xs">ABN: Pending registration</p>
         </div>
       </div>
     </footer>
