@@ -9,7 +9,7 @@ export default config({
   storage: useGitHub
     ? {
         kind: 'github',
-        repo: 'SholtoMc/tiny-sports',
+        repo: 'kamakazi34/Tiny-Sports',
       }
     : {
         kind: 'local',

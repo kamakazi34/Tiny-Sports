@@ -81,9 +81,9 @@ export default function AboutPage() {
                 it. That&apos;s Tiny Sports.
               </p>
               <p>
-                We&apos;re in our founding year — registered with ASIC, governed
-                by a five-person board, and currently submitting our first grant
-                applications. We&apos;re small by design and focused entirely on
+                We&apos;re in our founding year — incorporating with ASIC, governed
+                by a five-person founding board, and currently submitting our
+                first grant applications. We&apos;re small by design and focused entirely on
                 making the grant system work for the clubs and coaches who are
                 locked out of it.
               </p>
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 { name: 'Jake Martin', role: 'Chairperson' },
                 { name: 'Saxon Fletcher', role: 'Director' },
                 { name: 'Jacques Vandenberg', role: 'Director' },
-                { name: 'William Spears', role: 'Director' },
+                { name: 'William Speirs', role: 'Director' },
                 { name: 'Katie Fletcher', role: 'Director' },
               ].map((member) => (
                 <div
