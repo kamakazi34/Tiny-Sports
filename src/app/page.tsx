@@ -208,31 +208,56 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <p className="text-primary text-sm font-semibold uppercase tracking-wide">
-              Who we work with
+              Partner spotlight
             </p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight">
-              Jarasport — Triathlon Coaching, Victoria
+              Jarasport — Triathlon &amp; Cycling Coaching, Victoria
             </h2>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Jarasport is an independent triathlon coaching program based in
-              Victoria, developing athletes across road cycling, velodrome track,
-              and triathlon — including athletes who have competed at World
-              Championship level.
+              Jarasport is an independent coaching program based in Victoria,
+              specialising in triathlon, road cycling, and velodrome track
+              cycling. Coach Simon has developed athletes at every level — from
+              first-timers to competitors at ITU Triathlon World Championships.
             </p>
             <p className="text-muted-foreground mt-4 text-lg leading-8">
-              As a sole-trader coaching business, Jarasport couldn&apos;t apply
-              for Sport &amp; Recreation Victoria grants directly. Tiny Sports is
-              partnering with Jarasport to submit applications through the
-              2025–26 Sporting Club Grants Program — putting equipment funding,
-              event support, and athlete travel grants within reach of athletes
-              who would otherwise miss out.
+              The program offers structured training, personalised coaching, and
+              a supportive community environment that brings together athletes of
+              all abilities. Despite producing world-class results, Jarasport
+              operates as a sole-trader business — meaning it was locked out of
+              Sport &amp; Recreation Victoria grant programs entirely.
             </p>
-            <div className="mt-8">
+            <p className="text-muted-foreground mt-4 text-lg leading-8">
+              Tiny Sports is partnering with Jarasport to submit applications
+              under the 2025–26 SRV Sporting Club Grants Program. We&apos;re
+              applying for equipment funding to improve athlete training
+              resources, and participation funding to reduce cost barriers for
+              new and developing athletes — grants that were previously
+              completely out of reach.
+            </p>
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {[
+                { label: 'Sport', value: 'Triathlon & Cycling' },
+                { label: 'Location', value: 'Victoria' },
+                { label: 'Achievement', value: 'World Championship athletes' },
+              ].map((item) => (
+                <div key={item.label} className="bg-white rounded-lg px-5 py-4 border">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{item.label}</p>
+                  <p className="mt-1 font-semibold">{item.value}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild>
                 <Link href="/contact">
                   Work with us like Jarasport
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
+              </Button>
+              <Button asChild variant="outline">
+                <a href="https://www.jarasport.com.au" target="_blank" rel="noopener noreferrer">
+                  Visit Jarasport
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </div>
           </div>

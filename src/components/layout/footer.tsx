@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator'
 const footerLinks = {
   about: [
     { name: 'Our Mission', href: '/about' },
+    { name: 'Our Board', href: '/board' },
     { name: 'Impact', href: '/impact' },
     { name: 'Blog', href: '/blog' },
   ],
@@ -38,11 +39,11 @@ export function Footer() {
             </p>
             <div className="text-muted-foreground mt-4 flex flex-col gap-2 text-sm">
               <a
-                href="mailto:hello@tiny-sports.org"
+                href="mailto:jake.martin@saroarch.com"
                 className="hover:text-foreground inline-flex items-center gap-2"
               >
                 <Mail className="h-4 w-4" />
-                hello@tiny-sports.org
+                jake.martin@saroarch.com
               </a>
               <a
                 href="tel:+61437218197"

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -8,9 +9,9 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 const navigation = [
   { name: 'About', href: '/about' },
+  { name: 'Board', href: '/board' },
   { name: 'Services', href: '/services' },
   { name: 'Grants', href: '/grants' },
-  { name: 'Impact', href: '/impact' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ]
@@ -22,6 +23,13 @@ export function Header() {
     <header className="border-border/40 bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/logo.svg"
+            alt="Tiny Sports"
+            width={40}
+            height={40}
+            className="h-10 w-10"
+          />
           <span className="text-primary font-heading text-xl font-bold">
             Tiny Sports
           </span>
