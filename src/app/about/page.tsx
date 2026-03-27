@@ -159,7 +159,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[
-                { name: 'Jake Martin', role: 'Chairperson' },
+                { name: 'Jake Martin Alderman', role: 'Chairperson' },
                 { name: 'Saxon Fletcher', role: 'Director' },
                 { name: 'Jacques Vandenberg', role: 'Director' },
                 { name: 'William Speirs', role: 'Director' },
