@@ -153,8 +153,8 @@ export default function AboutPage() {
               Founding board
             </h2>
             <p className="text-muted-foreground mt-4 text-lg">
-              Tiny Sports Limited is governed by five founding directors with
-              backgrounds in technology, sport, education, and community
+              Tiny Sports Limited is governed by six founding directors with
+              backgrounds in technology, sport, education, architecture, and community
               development.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -164,6 +164,7 @@ export default function AboutPage() {
                 { name: 'Jacques Vandenberg', role: 'Director' },
                 { name: 'William Speirs', role: 'Director' },
                 { name: 'Katie Fletcher', role: 'Director' },
+                { name: 'James Pearce', role: 'Director' },
               ].map((member) => (
                 <div
                   key={member.name}

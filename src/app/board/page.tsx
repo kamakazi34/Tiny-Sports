@@ -55,6 +55,15 @@ const boardMembers = [
     linkedin: null,
     tags: ['Community Engagement', 'Sport'],
   },
+  {
+    name: 'James Pearce',
+    role: 'Director',
+    location: 'New Zealand',
+    background:
+      'James brings an international perspective to the board. Based in New Zealand, he contributes experience in sport and community development, and participates remotely in board meetings. His involvement reflects Tiny Sports\' commitment to drawing on diverse expertise regardless of geography.',
+    linkedin: null,
+    tags: ['Sport', 'Community Development', 'International'],
+  },
 ]
 
 export default function BoardPage() {
@@ -68,7 +77,7 @@ export default function BoardPage() {
               Our Board
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Tiny Sports Limited is governed by five founding directors with
+              Tiny Sports Limited is governed by six founding directors with
               backgrounds spanning technology, architecture, research, education,
               and community sport. We operate as a volunteer board — no directors
               are paid.
