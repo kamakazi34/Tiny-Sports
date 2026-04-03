@@ -27,98 +27,75 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="to-background relative overflow-hidden bg-gradient-to-b from-teal-50 py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              Helping community
-              <span className="text-primary"> sports clubs</span> access the
-              funding they deserve
-            </h1>
-            <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Tiny Sports Limited is a not-for-profit organisation that helps
-              Australian grassroots sports clubs and independent coaches navigate
-              government grant programs, build their capacity, and grow their
-              programs so they can focus on what matters: the athletes.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-4">
-              <Button asChild size="lg">
-                <Link href="/grants">
-                  Explore Grants
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/about">About Us</Link>
-              </Button>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+                Helping community
+                <span className="text-primary"> sports clubs</span> access the
+                funding they deserve
+              </h1>
+              <p className="text-muted-foreground mt-6 text-lg leading-8">
+                Tiny Sports Limited is a not-for-profit organisation that helps
+                Australian grassroots sports clubs and independent coaches navigate
+                government grant programs, build their capacity, and grow their
+                programs so they can focus on what matters: the athletes.
+              </p>
+              <div className="mt-10 flex items-center gap-4">
+                <Button asChild size="lg">
+                  <Link href="/grants">
+                    Explore Grants
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/about">About Us</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="mt-12 lg:mt-0 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src={`${R2}/photos/img_0819.jpg`}
+                alt="Jarasport triathlon athletes at the Gold Coast"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Hero photo strip */}
-      <section className="relative h-72 sm:h-96 overflow-hidden">
-        <div className="flex h-full gap-1">
-          <div className="relative flex-1 overflow-hidden">
-            <Image
-              src={`${R2}/photos/img_0819.jpg`}
-              alt="Jarasport athletes at triathlon start"
-              fill
-              className="object-cover object-center"
-              sizes="25vw"
-              priority
-            />
-          </div>
-          <div className="relative flex-1 overflow-hidden hidden sm:block">
-            <Image
-              src={`${R2}/photos/img_1164.jpg`}
-              alt="Cyclist on closed road course"
-              fill
-              className="object-cover object-top"
-              sizes="25vw"
-              priority
-            />
-          </div>
-          <div className="relative flex-1 overflow-hidden">
-            <Image
-              src={`${R2}/photos/pxl_swim_pool.jpg`}
-              alt="Swim squad training session"
-              fill
-              className="object-cover object-top"
-              sizes="25vw"
-              priority
-            />
-          </div>
-          <div className="relative flex-1 overflow-hidden hidden sm:block">
-            <Image
-              src={`${R2}/photos/s0000162.jpg`}
-              alt="Cyclists at the coast"
-              fill
-              className="object-cover object-center"
-              sizes="25vw"
-            />
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-      </section>
-
       {/* The Problem We Solve */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              The funding gap in grassroots sport
-            </h2>
-            <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Government grants exist to support community sport but most
-              coaches and small clubs don&apos;t know they exist, don&apos;t
-              meet the eligibility criteria as sole traders, or don&apos;t have
-              the time or capacity to apply. Tiny Sports bridges that gap.
-            </p>
-            <p className="text-muted-foreground mt-4 text-lg leading-8">
-              We act as the incorporated entity that applies on behalf of clubs
-              and coaches, handling the paperwork, writing the applications,
-              and managing the acquittal so the funding gets to where
-              it&apos;s needed.
-            </p>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-10 lg:mb-0">
+              <Image
+                src={`${R2}/photos/img_0844.jpg`}
+                alt="Athletes at triathlon swim start"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                The funding gap in grassroots sport
+              </h2>
+              <p className="text-muted-foreground mt-6 text-lg leading-8">
+                Government grants exist to support community sport but most
+                coaches and small clubs don&apos;t know they exist, don&apos;t
+                meet the eligibility criteria as sole traders, or don&apos;t have
+                the time or capacity to apply. Tiny Sports bridges that gap.
+              </p>
+              <p className="text-muted-foreground mt-4 text-lg leading-8">
+                We act as the incorporated entity that applies on behalf of clubs
+                and coaches, handling the paperwork, writing the applications,
+                and managing the acquittal so the funding gets to where
+                it&apos;s needed.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -141,31 +118,48 @@ export default function HomePage() {
                 description:
                   'We identify the right grant programs for your situation, write the applications, and manage the submission and acquittal process end-to-end.',
                 href: '/services#grants',
+                image: `${R2}/photos/img_2375.jpg`,
+                imageAlt: 'Athletes celebrating with medals after event',
               },
               {
                 title: 'Eligibility & Setup',
                 description:
                   "Many coaches and small clubs can't apply for grants directly as sole traders. We help structure your operations so funding is accessible.",
                 href: '/services#capacity',
+                image: `${R2}/photos/s0000162.jpg`,
+                imageAlt: 'Group of cyclists on beachside path',
               },
               {
                 title: 'Club Capacity Building',
                 description:
                   'Governance, strategic planning, financial management, and compliance support — the foundations your club needs to grow sustainably.',
                 href: '/services#capacity',
+                image: `${R2}/photos/pxl_swim_pool.jpg`,
+                imageAlt: 'Swim squad training session in pool',
               },
             ].map((service) => (
               <Link
                 key={service.title}
                 href={service.href}
-                className="group bg-card rounded-xl border p-8 transition-shadow hover:shadow-md"
+                className="group bg-card rounded-xl border overflow-hidden transition-shadow hover:shadow-md"
               >
-                <h3 className="group-hover:text-primary text-xl font-semibold">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground mt-3 text-sm">
-                  {service.description}
-                </p>
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="group-hover:text-primary text-xl font-semibold">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mt-3 text-sm">
+                    {service.description}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
@@ -257,7 +251,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
             {/* Text */}
-            <div className="mx-auto max-w-3xl lg:max-w-none">
+            <div>
               <p className="text-primary text-sm font-semibold uppercase tracking-wide">
                 Partner spotlight
               </p>
@@ -267,23 +261,14 @@ export default function HomePage() {
               <p className="text-muted-foreground mt-6 text-lg leading-8">
                 Jarasport is an independent coaching program based in Victoria,
                 specialising in triathlon, road cycling, and velodrome track
-                cycling. Coach Simon has developed athletes at every level —
-                from first-timers to competitors at ITU Triathlon World
-                Championships.
+                cycling. Coach Simon has developed athletes at every level from
+                first-timers to competitors at ITU Triathlon World Championships.
               </p>
               <p className="text-muted-foreground mt-4 text-lg leading-8">
-                The program offers structured training, personalised coaching,
-                and a supportive community environment that brings together
-                athletes of all abilities. Despite producing world-class results,
-                Jarasport operates as a sole-trader business, meaning it was
-                locked out of Sport &amp; Recreation Victoria grant programs
-                entirely.
-              </p>
-              <p className="text-muted-foreground mt-4 text-lg leading-8">
-                Tiny Sports is partnering with Jarasport to submit applications
-                under the 2025–26 SRV Sporting Club Grants Program for equipment
-                funding and participation funding to reduce cost barriers for
-                new and developing athletes.
+                Despite producing world-class results, Jarasport operates as a
+                sole-trader business, meaning it was locked out of Sport &amp;
+                Recreation Victoria grant programs entirely. Tiny Sports is
+                partnering with Jarasport to change that.
               </p>
               <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {[
@@ -312,76 +297,38 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            {/* Photos */}
-            <div className="mt-12 lg:mt-0 grid grid-cols-2 gap-3">
-              <div className="relative aspect-[4/5] rounded-xl overflow-hidden col-span-2">
+            {/* Photos embedded in section */}
+            <div className="mt-12 lg:mt-0 space-y-3">
+              <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
                 <Image
                   src={`${R2}/photos/img_0833.jpg`}
-                  alt="Jarasport athletes before triathlon swim start"
+                  alt="Jarasport athletes before triathlon swim start, Gold Coast"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="relative aspect-square rounded-xl overflow-hidden">
-                <Image
-                  src={`${R2}/photos/img_0858.jpg`}
-                  alt="Athletes running into the water"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
-              </div>
-              <div className="relative aspect-square rounded-xl overflow-hidden">
-                <Image
-                  src={`${R2}/photos/img_2375.jpg`}
-                  alt="Athletes celebrating with medals"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative aspect-square rounded-xl overflow-hidden">
+                  <Image
+                    src={`${R2}/photos/img_0858.jpg`}
+                    alt="Athletes running into the water at swim start"
+                    fill
+                    className="object-cover object-center"
+                    sizes="25vw"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden">
+                  <Image
+                    src={`${R2}/photos/img_1164.jpg`}
+                    alt="Cyclist on closed road course"
+                    fill
+                    className="object-cover object-top"
+                    sizes="25vw"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Photo Gallery */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Athletes in action
-            </h2>
-            <p className="text-muted-foreground mt-4 text-lg">
-              The community we support, out on the course.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {[
-              { key: 'img_0844.jpg', alt: 'Triathlon swim start lineup', span: 'col-span-2 row-span-2' },
-              { key: 'img_1995.jpg', alt: 'Athlete running in triathlon', span: '' },
-              { key: 'img_2272.jpg', alt: 'Runner at event finish', span: '' },
-              { key: 'img_0907.jpg', alt: 'Athletes exiting the water', span: '' },
-              { key: 's0000148.jpg', alt: 'Two cyclists riding together', span: '' },
-              { key: 'cd103622a.jpg', alt: 'Athletes running in park', span: '' },
-              { key: 'cc103714a.jpg', alt: 'Athlete on run course', span: '' },
-              { key: 's0000130.jpg', alt: 'Sunset at marina', span: '' },
-            ].map((photo) => (
-              <div
-                key={photo.key}
-                className={`relative overflow-hidden rounded-xl bg-muted ${photo.span}`}
-                style={{ aspectRatio: photo.span ? '1 / 1' : '1 / 1' }}
-              >
-                <Image
-                  src={`${R2}/photos/${photo.key}`}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>
