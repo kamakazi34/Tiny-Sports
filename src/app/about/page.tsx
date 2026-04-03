@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Heart, Users, Target, Lightbulb } from 'lucide-react'
+
+const R2 = 'https://pub-b6f613d422474f1ea6487305aad291ed.r2.dev'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -57,7 +60,17 @@ export default function AboutPage() {
       {/* Origin Story */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-10 lg:mb-0">
+              <Image
+                src={`${R2}/photos/img_0819.jpg`}
+                alt="Jarasport athletes at triathlon event"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          <div className="mx-auto max-w-3xl lg:max-w-none">
             <h2 className="text-3xl font-bold tracking-tight">How we started</h2>
             <div className="text-muted-foreground mt-6 space-y-4 text-lg leading-8">
               <p>
@@ -88,6 +101,7 @@ export default function AboutPage() {
                 locked out of it.
               </p>
             </div>
+          </div>
           </div>
         </div>
       </section>
