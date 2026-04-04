@@ -33,7 +33,7 @@ const values = [
     icon: Lightbulb,
     title: 'Transparency',
     description:
-      'We are a not-for-profit. Our governance documents, conflict of interest policies, and financials are available to anyone who asks.',
+      'We are a for-purpose organisation. Our governance documents, conflict of interest policies, and financials are available to anyone who asks.',
   },
 ]
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
               About Tiny Sports
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              A not-for-profit Company Limited by Guarantee, founded to help
+              A for-purpose Company Limited by Guarantee, founded to help
               Australian grassroots sports clubs and independent coaches access
               the government funding they&apos;re eligible for but can&apos;t
               reach on their own.
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 funding was sitting on the table, unreachable.
               </p>
               <p>
-                The solution was simple: set up a not-for-profit that could act
+                The solution was simple: set up a for-purpose organisation that could act
                 as the incorporated entity, apply for grants on behalf of clubs
                 like Jarasport, and get the funding to the athletes who needed
                 it. That&apos;s Tiny Sports.
@@ -116,7 +116,7 @@ export default function AboutPage() {
                 Tiny Sports Limited is a Company Limited by Guarantee (CLG)
                 incorporated under the Corporations Act 2001 (Cth) and regulated
                 by the Australian Securities and Investments Commission (ASIC).
-                We operate as a not-for-profit — no profits are distributed to
+                We operate as a for-purpose organisation — no profits are distributed to
                 directors or members.
               </p>
               <p>

@@ -2,7 +2,7 @@
 
 ## Project
 
-Not-for-profit marketing website helping Australian community sports clubs with grant writing, brand development, and capacity building.
+For-purpose marketing website helping Australian community sports clubs with grant writing, brand development, and capacity building.
 
 ## Stack
 

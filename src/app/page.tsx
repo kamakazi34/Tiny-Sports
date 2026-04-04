@@ -35,7 +35,7 @@ export default function HomePage() {
                 funding they deserve
               </h1>
               <p className="text-muted-foreground mt-6 text-lg leading-8">
-                Tiny Sports Limited is a not-for-profit organisation that helps
+                Tiny Sports Limited is a for-purpose organisation that helps
                 Australian grassroots sports clubs and independent coaches navigate
                 government grant programs, build their capacity, and grow their
                 programs so they can focus on what matters: the athletes.
