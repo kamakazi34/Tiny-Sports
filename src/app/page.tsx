@@ -326,7 +326,7 @@ export default function HomePage() {
                     src={`${R2}/photos/img_1164.jpg`}
                     alt="Cyclist on closed road course"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-bottom"
                     sizes="25vw"
                   />
                 </div>
