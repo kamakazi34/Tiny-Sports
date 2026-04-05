@@ -120,7 +120,7 @@ export default function HomePage() {
                 href: '/services#grants',
                 image: `${R2}/photos/img_2375.jpg`,
                 imageAlt: 'Athletes celebrating with medals after event',
-                objectPosition: 'object-top',
+                imageStyle: { objectPosition: 'center 16%' },
               },
               {
                 title: 'Eligibility & Setup',
@@ -129,7 +129,7 @@ export default function HomePage() {
                 href: '/services#capacity',
                 image: `${R2}/photos/s0000162.jpg`,
                 imageAlt: 'Group of cyclists on beachside path',
-                objectPosition: 'object-center',
+                imageStyle: { objectPosition: 'center center' },
               },
               {
                 title: 'Club Capacity Building',
@@ -138,7 +138,7 @@ export default function HomePage() {
                 href: '/services#capacity',
                 image: `${R2}/photos/pxl_swim_pool.jpg`,
                 imageAlt: 'Swim squad training session in pool',
-                objectPosition: 'object-center',
+                imageStyle: { objectPosition: 'center center' },
               },
             ].map((service) => (
               <Link
@@ -151,7 +151,8 @@ export default function HomePage() {
                     src={service.image}
                     alt={service.imageAlt}
                     fill
-                    className={`object-cover ${service.objectPosition} group-hover:scale-105 transition-transform duration-500`}
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    style={service.imageStyle}
                     sizes="(max-width: 640px) 100vw, 33vw"
                   />
                 </div>
