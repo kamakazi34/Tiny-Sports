@@ -120,7 +120,7 @@ export default function HomePage() {
                 href: '/services#grants',
                 image: `${R2}/photos/img_2375.jpg`,
                 imageAlt: 'Athletes celebrating with medals after event',
-                imageStyle: { objectPosition: 'center 16%' },
+                imageStyle: { objectPosition: 'center 18%' },
               },
               {
                 title: 'Eligibility & Setup',
