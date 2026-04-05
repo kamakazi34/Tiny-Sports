@@ -72,10 +72,11 @@ export default function HomePage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-10 lg:mb-0">
               <Image
-                src={`${R2}/photos/cc103714a.jpg`}
-                alt="Athlete running in rain during triathlon"
+                src={`${R2}/photos/img_2272.jpg`}
+                alt="Female athlete running during triathlon"
                 fill
-                className="object-cover object-center"
+                className="object-cover"
+                style={{ objectPosition: 'center 7%' }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
