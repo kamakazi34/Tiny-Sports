@@ -72,8 +72,8 @@ export default function HomePage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-10 lg:mb-0">
               <Image
-                src={`${R2}/photos/img_0844.jpg`}
-                alt="Athletes at triathlon swim start"
+                src={`${R2}/photos/cc103714a.jpg`}
+                alt="Athlete running in rain during triathlon"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
