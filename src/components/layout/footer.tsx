@@ -6,7 +6,6 @@ const footerLinks = {
   about: [
     { name: 'Our Mission', href: '/about' },
     { name: 'Our Board', href: '/board' },
-    { name: 'Impact', href: '/impact' },
     { name: 'Blog', href: '/blog' },
   ],
   services: [
