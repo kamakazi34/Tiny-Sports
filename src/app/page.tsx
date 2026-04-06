@@ -27,7 +27,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="to-background relative overflow-hidden bg-gradient-to-b from-teal-50 py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+          <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
                 Helping community
@@ -36,9 +36,10 @@ export default function HomePage() {
               </h1>
               <p className="text-muted-foreground mt-6 text-lg leading-8">
                 Tiny Sports Limited is a for-purpose organisation that helps
-                Australian grassroots sports clubs and independent coaches navigate
-                government grant programs, build their capacity, and grow their
-                programs so they can focus on what matters: the athletes.
+                Australian grassroots sports clubs and independent coaches
+                navigate government grant programs, build their capacity, and
+                grow their programs so they can focus on what matters: the
+                athletes.
               </p>
               <div className="mt-10 flex items-center gap-4">
                 <Button asChild size="lg">
@@ -52,7 +53,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="mt-12 lg:mt-0 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative mt-12 aspect-[4/3] overflow-hidden rounded-2xl shadow-xl lg:mt-0">
               <Image
                 src={`${R2}/photos/img_0819.jpg`}
                 alt="Jarasport triathlon athletes at the Gold Coast"
@@ -69,8 +70,8 @@ export default function HomePage() {
       {/* The Problem We Solve */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-10 lg:mb-0">
+          <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
+            <div className="relative mb-10 aspect-[3/4] overflow-hidden rounded-2xl shadow-lg lg:mb-0">
               <Image
                 src={`${R2}/photos/img_0838.jpg`}
                 alt="Two athletes at swim start with Gold Coast skyline"
@@ -87,14 +88,15 @@ export default function HomePage() {
               <p className="text-muted-foreground mt-6 text-lg leading-8">
                 Government grants exist to support community sport but most
                 coaches and small clubs don&apos;t know they exist, don&apos;t
-                meet the eligibility criteria as sole traders, or don&apos;t have
-                the time or capacity to apply. Tiny Sports bridges that gap.
+                meet the eligibility criteria as sole traders, or don&apos;t
+                have the time or capacity to apply. Tiny Sports bridges that
+                gap.
               </p>
               <p className="text-muted-foreground mt-4 text-lg leading-8">
-                We act as the incorporated entity that applies on behalf of clubs
-                and coaches, handling the paperwork, writing the applications,
-                and managing the acquittal so the funding gets to where
-                it&apos;s needed.
+                We act as the incorporated entity that applies on behalf of
+                clubs and coaches, handling the paperwork, writing the
+                applications, and managing the acquittal so the funding gets to
+                where it&apos;s needed.
               </p>
             </div>
           </div>
@@ -145,14 +147,14 @@ export default function HomePage() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="group bg-card rounded-xl border overflow-hidden transition-shadow hover:shadow-md"
+                className="group bg-card overflow-hidden rounded-xl border transition-shadow hover:shadow-md"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.imageAlt}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     style={service.imageStyle}
                     sizes="(max-width: 640px) 100vw, 33vw"
                   />
@@ -254,10 +256,10 @@ export default function HomePage() {
       {/* Case Study — Jarasport */}
       <section className="bg-teal-50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
+          <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
             {/* Text */}
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-wide">
+              <p className="text-primary text-sm font-semibold tracking-wide uppercase">
                 Partner spotlight
               </p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight">
@@ -267,7 +269,8 @@ export default function HomePage() {
                 Jarasport is an independent coaching program based in Victoria,
                 specialising in triathlon, road cycling, and velodrome track
                 cycling. Coach Simon has developed athletes at every level from
-                first-timers to competitors at ITU Triathlon World Championships.
+                first-timers to competitors at ITU Triathlon World
+                Championships.
               </p>
               <p className="text-muted-foreground mt-4 text-lg leading-8">
                 Despite producing world-class results, Jarasport operates as a
@@ -279,10 +282,18 @@ export default function HomePage() {
                 {[
                   { label: 'Sport', value: 'Triathlon & Cycling' },
                   { label: 'Location', value: 'Victoria' },
-                  { label: 'Achievement', value: 'World Championship athletes' },
+                  {
+                    label: 'Achievement',
+                    value: 'World Championship athletes',
+                  },
                 ].map((item) => (
-                  <div key={item.label} className="bg-white rounded-lg px-5 py-4 border">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{item.label}</p>
+                  <div
+                    key={item.label}
+                    className="rounded-lg border bg-white px-5 py-4"
+                  >
+                    <p className="text-muted-foreground text-xs font-semibold tracking-wide uppercase">
+                      {item.label}
+                    </p>
                     <p className="mt-1 font-semibold">{item.value}</p>
                   </div>
                 ))}
@@ -295,7 +306,11 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <a href="https://www.jarasport.com.au" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.jarasport.com.au"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Visit Jarasport
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
@@ -303,8 +318,8 @@ export default function HomePage() {
               </div>
             </div>
             {/* Photos embedded in section */}
-            <div className="mt-12 lg:mt-0 space-y-3">
-              <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+            <div className="mt-12 space-y-3 lg:mt-0">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
                 <Image
                   src={`${R2}/photos/img_0833.jpg`}
                   alt="Jarasport athletes before triathlon swim start, Gold Coast"
@@ -314,7 +329,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <div className="relative aspect-square rounded-xl overflow-hidden">
+                <div className="relative aspect-square overflow-hidden rounded-xl">
                   <Image
                     src={`${R2}/photos/img_0858.jpg`}
                     alt="Athletes running into the water at swim start"
@@ -323,7 +338,7 @@ export default function HomePage() {
                     sizes="25vw"
                   />
                 </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden">
+                <div className="relative aspect-square overflow-hidden rounded-xl">
                   <Image
                     src={`${R2}/photos/img_1164.jpg`}
                     alt="Cyclist on closed road course"
@@ -333,6 +348,83 @@ export default function HomePage() {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Commitments */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Our compliance commitments
+            </h2>
+            <p className="text-muted-foreground mt-4 text-lg">
+              Tiny Sports and all partner organisations we support adhere to
+              these standards as a condition of government grant funding.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="bg-card rounded-xl border p-8">
+              <h3 className="text-xl font-semibold">
+                Victorian Fair Play Code
+              </h3>
+              <p className="text-muted-foreground mt-3 text-sm leading-6">
+                We adhere to and promote Victoria&apos;s Fair Play Code,
+                establishing safe, fair, and inclusive sporting environments
+                across all programs we support. The Code&apos;s five principles
+                — Integrity, Respect, Responsibility, Fairness, and Safety — are
+                embedded in our operations and those of our partner
+                organisations.
+              </p>
+              <a
+                href="https://sport.vic.gov.au/publications-and-resources/community-sport-resources/fair-play-code"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary mt-5 inline-block text-sm font-medium hover:underline"
+              >
+                Fair Play Code — Sport and Recreation Victoria →
+              </a>
+            </div>
+            <div className="bg-card rounded-xl border p-8">
+              <h3 className="text-xl font-semibold">Child Safe Standards</h3>
+              <p className="text-muted-foreground mt-3 text-sm leading-6">
+                Where participants under 18 are involved, we require partner
+                organisations to have implemented Victoria&apos;s 11 Child Safe
+                Standards — including child-focused complaints processes,
+                suitable workforce screening, and documented child safety
+                policies. We confirm compliance as part of every grant
+                application.
+              </p>
+              <a
+                href="https://ccyp.vic.gov.au/child-safe-standards"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary mt-5 inline-block text-sm font-medium hover:underline"
+              >
+                Child Safe Standards — CCYP Victoria →
+              </a>
+            </div>
+            <div className="bg-card rounded-xl border p-8">
+              <h3 className="text-xl font-semibold">
+                National Anti-Doping Policy
+              </h3>
+              <p className="text-muted-foreground mt-3 text-sm leading-6">
+                We comply with the Australian National Anti-Doping Scheme and
+                Australian National Anti-Doping Policy where required. Partner
+                organisations are expected to operate in accordance with Sport
+                Integrity Australia&apos;s anti-doping requirements relevant to
+                their level of competition.
+              </p>
+              <a
+                href="https://www.sportintegrity.gov.au/what-we-do/anti-doping"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary mt-5 inline-block text-sm font-medium hover:underline"
+              >
+                Anti-Doping — Sport Integrity Australia →
+              </a>
             </div>
           </div>
         </div>
