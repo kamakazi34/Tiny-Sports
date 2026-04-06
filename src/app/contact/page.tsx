@@ -35,11 +35,11 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold">Contact Details</h2>
               <div className="mt-6 space-y-4">
                 <a
-                  href="mailto:jake.martin@saroarch.com"
+                  href="mailto:jake.martin@tiny-sports.org"
                   className="text-muted-foreground hover:text-foreground flex items-center gap-3"
                 >
                   <Mail className="text-primary h-5 w-5" />
-                  jake.martin@saroarch.com
+                  jake.martin@tiny-sports.org
                 </a>
                 <a
                   href="tel:+61437218197"

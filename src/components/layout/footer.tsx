@@ -39,11 +39,11 @@ export function Footer() {
             </p>
             <div className="text-muted-foreground mt-4 flex flex-col gap-2 text-sm">
               <a
-                href="mailto:jake.martin@saroarch.com"
+                href="mailto:jake.martin@tiny-sports.org"
                 className="hover:text-foreground inline-flex items-center gap-2"
               >
                 <Mail className="h-4 w-4" />
-                jake.martin@saroarch.com
+                jake.martin@tiny-sports.org
               </a>
               <a
                 href="tel:+61437218197"
