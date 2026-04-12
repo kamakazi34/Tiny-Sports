@@ -94,11 +94,13 @@ export default function AboutPage() {
                 it. That&apos;s Tiny Sports.
               </p>
               <p>
-                We&apos;re in our founding year — incorporating with ASIC, governed
-                by a five-person founding board, and currently submitting our
-                first grant applications. We&apos;re small by design and focused entirely on
-                making the grant system work for the clubs and coaches who are
-                locked out of it.
+                We incorporated with ASIC in April 2026, governed by a
+                six-person founding board. We submitted our first grant
+                applications that same month and are now actively building our
+                partner network of coaches and clubs across Australia.
+                We&apos;re small by design and focused entirely on making the
+                grant system work for the clubs and coaches who are locked out
+                of it.
               </p>
             </div>
           </div>
@@ -116,15 +118,16 @@ export default function AboutPage() {
                 Tiny Sports Limited is a Company Limited by Guarantee (CLG)
                 incorporated under the Corporations Act 2001 (Cth) and regulated
                 by the Australian Securities and Investments Commission (ASIC).
-                We operate as a for-purpose organisation — no profits are distributed to
+                ACN 696 877 988 | ABN 43 696 877 988. We operate as a
+                for-purpose organisation — no profits are distributed to
                 directors or members.
               </p>
               <p>
-                We are governed by a five-person founding board and operate
-                under a formal Constitution, Conflict of Interest Policy,
-                Financial Management Policy, and Privacy Policy. We are applying
-                for ACNC charity registration, which will unlock DGR (Deductible
-                Gift Recipient) status and tax-exempt treatment.
+                We are governed by six founding directors and operate under a
+                formal Constitution, Conflict of Interest Policy, Financial
+                Management Policy, and Privacy Policy. We are applying for ACNC
+                charity registration, which will unlock DGR (Deductible Gift
+                Recipient) status and tax-exempt treatment.
               </p>
               <p>
                 Our registered office is in Queensland. We operate nationally,
@@ -168,8 +171,8 @@ export default function AboutPage() {
             </h2>
             <p className="text-muted-foreground mt-4 text-lg">
               Tiny Sports Limited is governed by six founding directors with
-              backgrounds in technology, sport, education, architecture, and community
-              development.
+              backgrounds in technology, sport, education, architecture, and
+              community development.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[

@@ -115,9 +115,9 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-muted-foreground text-xs">
             &copy; {new Date().getFullYear()} Tiny Sports Limited. For-Purpose
-            Company Limited by Guarantee. ACN pending registration.
+            Company Limited by Guarantee. ACN 696 877 988.
           </p>
-          <p className="text-muted-foreground text-xs">ABN: Pending registration</p>
+          <p className="text-muted-foreground text-xs">ABN 43 696 877 988</p>
         </div>
       </div>
     </footer>

@@ -181,8 +181,9 @@ export default function HomePage() {
               Grant programs we work with
             </h2>
             <p className="text-muted-foreground mt-4 text-lg">
-              We currently focus on Victorian state government programs, with
-              Queensland support coming soon.
+              We work with state government grant programs across Victoria and
+              Queensland, with national coverage growing as we expand our
+              partner network.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -191,43 +192,43 @@ export default function HomePage() {
                 name: 'Sporting Club Grants Program',
                 body: 'Sport and Recreation Victoria',
                 amounts: '$750 – $5,000 per category',
-                status: 'Open — closes 7 April 2026',
-                statusColor: 'text-green-600',
+                status: 'Closed — next round expected 2027',
+                statusColor: 'text-muted-foreground',
               },
               {
                 name: 'Category 1: Uniforms & Equipment',
                 body: 'SRV Sporting Club Grants',
                 amounts: 'Up to $1,000',
-                status: 'Open now',
-                statusColor: 'text-green-600',
+                status: 'Closed — next round expected 2027',
+                statusColor: 'text-muted-foreground',
               },
               {
                 name: 'Category 3: Access & Events',
                 body: 'SRV Sporting Club Grants',
                 amounts: '$2,500 – $5,000',
-                status: 'Open now',
-                statusColor: 'text-green-600',
+                status: 'Closed — next round expected 2027',
+                statusColor: 'text-muted-foreground',
               },
               {
                 name: 'Category 4: Travel',
                 body: 'SRV Sporting Club Grants',
                 amounts: '$750 per athlete (up to 8)',
-                status: 'Open now',
-                statusColor: 'text-green-600',
+                status: 'Closed — next round expected 2027',
+                statusColor: 'text-muted-foreground',
               },
               {
-                name: 'Category 2: Volunteers & Officials',
-                body: 'SRV Sporting Club Grants',
-                amounts: 'Up to $5,000',
-                status: 'Open now',
-                statusColor: 'text-green-600',
+                name: 'Active Clubs Funding',
+                body: 'Sport and Recreation Queensland',
+                amounts: 'Up to $2,500',
+                status: 'Monitoring — next round TBA',
+                statusColor: 'text-amber-600',
               },
               {
-                name: 'Queensland Programs',
+                name: 'Emerging Athlete Pathways',
                 body: 'Sport and Recreation Queensland',
                 amounts: 'Various',
-                status: 'Coming soon',
-                statusColor: 'text-muted-foreground',
+                status: 'Ongoing — enquire for details',
+                statusColor: 'text-amber-600',
               },
             ].map((grant) => (
               <div key={grant.name} className="bg-card rounded-xl border p-6">
@@ -260,10 +261,10 @@ export default function HomePage() {
             {/* Text */}
             <div>
               <p className="text-primary text-sm font-semibold tracking-wide uppercase">
-                Partner spotlight
+                Why we exist
               </p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight">
-                Jarasport — Triathlon &amp; Cycling Coaching, Victoria
+                Jarasport — the story behind Tiny Sports
               </h2>
               <p className="text-muted-foreground mt-6 text-lg leading-8">
                 Jarasport is an independent coaching program based in Victoria,
@@ -275,8 +276,9 @@ export default function HomePage() {
               <p className="text-muted-foreground mt-4 text-lg leading-8">
                 Despite producing world-class results, Jarasport operates as a
                 sole-trader business, meaning it was locked out of Sport &amp;
-                Recreation Victoria grant programs entirely. Tiny Sports is
-                partnering with Jarasport to change that.
+                Recreation Victoria grant programs entirely. Working with
+                Jarasport revealed the scale of this problem and became the
+                model for everything Tiny Sports does.
               </p>
               <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {[
@@ -301,19 +303,9 @@ export default function HomePage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild>
                   <Link href="/contact">
-                    Work with us like Jarasport
+                    Partner with us
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>
-                <Button asChild variant="outline">
-                  <a
-                    href="https://www.jarasport.com.au"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visit Jarasport
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
                 </Button>
               </div>
             </div>
