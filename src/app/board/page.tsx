@@ -29,15 +29,6 @@ const boardMembers = [
     tags: ['Technology', 'Engineering', 'Open Source'],
   },
   {
-    name: 'Jacques Vandenberg',
-    role: 'Director',
-    location: 'Brisbane, QLD',
-    background:
-      'Jacques is based at Queensland University of Technology (QUT), where he works in research and education. He brings an academic and analytical perspective to the board, contributing to Tiny Sports\' evidence-based approach to grant writing and program evaluation.',
-    linkedin: null,
-    tags: ['Research', 'Education', 'QUT'],
-  },
-  {
     name: 'William Speirs',
     role: 'Director',
     location: null,
@@ -77,8 +68,8 @@ export default function BoardPage() {
               Our Board
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Tiny Sports Limited is governed by six founding directors with
-              backgrounds spanning technology, architecture, research, education,
+              Tiny Sports Limited is governed by a founding board with
+              backgrounds spanning technology, architecture, education,
               and community sport. We operate as a volunteer board — no directors
               are paid.
             </p>

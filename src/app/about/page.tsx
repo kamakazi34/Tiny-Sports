@@ -123,9 +123,9 @@ export default function AboutPage() {
                 directors or members.
               </p>
               <p>
-                We are governed by six founding directors and operate under a
-                formal Constitution, Conflict of Interest Policy, Financial
-                Management Policy, and Privacy Policy. We are applying for ACNC
+                We are governed by a founding board of directors and operate
+                under a formal Constitution, Conflict of Interest Policy,
+                Financial Management Policy, and Privacy Policy. We are applying for ACNC
                 charity registration, which will unlock DGR (Deductible Gift
                 Recipient) status and tax-exempt treatment.
               </p>
@@ -170,7 +170,7 @@ export default function AboutPage() {
               Founding board
             </h2>
             <p className="text-muted-foreground mt-4 text-lg">
-              Tiny Sports Limited is governed by six founding directors with
+              Tiny Sports Limited is governed by a founding board with
               backgrounds in technology, sport, education, architecture, and
               community development.
             </p>
@@ -178,7 +178,6 @@ export default function AboutPage() {
               {[
                 { name: 'Jake Martin Alderman', role: 'Chairperson' },
                 { name: 'Saxon Fletcher', role: 'Director' },
-                { name: 'Jacques Vandenberg', role: 'Director' },
                 { name: 'William Speirs', role: 'Director' },
                 { name: 'Katie Fletcher', role: 'Director' },
                 { name: 'James Pearce', role: 'Director' },
