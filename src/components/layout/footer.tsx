@@ -5,13 +5,13 @@ import { Separator } from '@/components/ui/separator'
 const footerLinks = {
   about: [
     { name: 'Our Mission', href: '/about' },
-    { name: 'Our Board', href: '/board' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Our Team', href: '/board' },
+    { name: 'News', href: '/blog' },
   ],
-  services: [
-    { name: 'Grant Writing', href: '/services#grants' },
-    { name: 'Brand Development', href: '/services#brand' },
-    { name: 'Capacity Building', href: '/services#capacity' },
+  works: [
+    { name: 'How It Works', href: '/how-it-works' },
+    { name: 'Who We Help', href: '/who-we-help' },
+    { name: 'Services', href: '/services' },
   ],
   resources: [
     { name: 'Grant Guides', href: '/grants' },
@@ -75,11 +75,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services links */}
+          {/* How it works links */}
           <div>
-            <h3 className="font-heading text-sm font-semibold">Services</h3>
+            <h3 className="font-heading text-sm font-semibold">Get Started</h3>
             <ul className="mt-3 space-y-2">
-              {footerLinks.services.map((link) => (
+              {footerLinks.works.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

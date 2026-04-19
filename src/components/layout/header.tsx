@@ -9,10 +9,11 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 const navigation = [
   { name: 'About', href: '/about' },
-  { name: 'Board', href: '/board' },
-  { name: 'Services', href: '/services' },
+  { name: 'How It Works', href: '/how-it-works' },
+  { name: 'Who We Help', href: '/who-we-help' },
   { name: 'Grants', href: '/grants' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Team', href: '/board' },
+  { name: 'News', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ]
 

@@ -5,9 +5,9 @@ import { reader } from '@/lib/keystatic/reader'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'News & Updates',
   description:
-    'Tips, guides, and insights for Australian community sports clubs on grants, branding, and club management.',
+    'News, updates, and guides from Tiny Sports — supporting Australian community sports clubs and coaches to access government grants.',
 }
 
 export default async function BlogPage() {
@@ -26,10 +26,11 @@ export default async function BlogPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Blog
+              News &amp; Updates
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Tips, guides, and insights to help your club thrive.
+              Organisation updates, grant guides, and insights for Australian
+              coaches and clubs.
             </p>
           </div>
         </div>

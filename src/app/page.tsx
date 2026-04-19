@@ -43,13 +43,13 @@ export default function HomePage() {
               </p>
               <div className="mt-10 flex items-center gap-4">
                 <Button asChild size="lg">
-                  <Link href="/grants">
-                    Explore Grants
+                  <Link href="/how-it-works">
+                    How it works
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/about">About Us</Link>
+                  <Link href="/who-we-help">Who we help</Link>
                 </Button>
               </div>
             </div>

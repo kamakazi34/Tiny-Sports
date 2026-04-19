@@ -7,9 +7,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
     '',
     '/about',
+    '/how-it-works',
+    '/who-we-help',
     '/services',
     '/grants',
     '/blog',
+    '/board',
     '/contact',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
