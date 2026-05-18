@@ -14,6 +14,7 @@ const navigation = [
   { name: 'Grants', href: '/grants' },
   { name: 'Team', href: '/board' },
   { name: 'News', href: '/blog' },
+  { name: 'Donate a Bike', href: '/donate-a-bike' },
   { name: 'Contact', href: '/contact' },
 ]
 

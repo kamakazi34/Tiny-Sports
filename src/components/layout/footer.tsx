@@ -15,6 +15,7 @@ const footerLinks = {
   ],
   resources: [
     { name: 'Grant Guides', href: '/grants' },
+    { name: 'Donate a Bike', href: '/donate-a-bike' },
     { name: 'Contact Us', href: '/contact' },
   ],
 }
