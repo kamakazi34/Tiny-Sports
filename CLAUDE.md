@@ -58,6 +58,7 @@ src/
 - **Fonts:** Plus Jakarta Sans (headings) + Inter (body)
 - **Border radius:** 0.5rem default
 - **Tailwind v4:** Use `@theme` in CSS, OKLCH colors
+- **Full brand + document/print spec:** see `BRAND.md` (hex + CMYK values, white-background print rule for documents and InDesign collateral)
 
 ## Content Schema (Keystatic)
 
