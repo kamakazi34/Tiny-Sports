@@ -47,7 +47,7 @@ export default config({
     'grant-guides': collection({
       label: 'Grant Guides',
       slugField: 'title',
-      path: 'src/content/grant-guides/*',
+      path: 'src/content/grant-guides/*/',
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Grant Name' } }),

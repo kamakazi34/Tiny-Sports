@@ -1,70 +1,91 @@
 import type { Metadata } from 'next'
-import { Mail, MapPin, Phone } from 'lucide-react'
 import { ContactForm } from '@/components/shared/contact-form'
 
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Tiny Sports. We help Australian community sports clubs with grants, branding, and capacity building.',
+    'Get in touch with Tiny Sports. We help Australian community sports clubs and coaches access government grants.',
 }
 
 export default function ContactPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="to-background bg-gradient-to-b from-teal-50 py-16 sm:py-24">
+      <section className="border-border border-b py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Get in Touch
+          <div className="max-w-3xl">
+            <p className="eyebrow">Contact</p>
+            <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
+              Tell us about your program
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Whether you need help with a grant application or want to discuss
-              how we can support your club, we&apos;d love to hear from you.
+              Whether you need help with a grant application or want to talk
+              through how the partner model works, start here. The eligibility
+              check is free.
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact form + info */}
-      <section className="py-16">
+      <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
             {/* Contact info */}
-            <div>
-              <h2 className="text-2xl font-bold">Contact Details</h2>
-              <div className="mt-6 space-y-4">
-                <a
-                  href="mailto:jake.martin@tiny-sports.org"
-                  className="text-muted-foreground hover:text-foreground flex items-center gap-3"
-                >
-                  <Mail className="text-primary h-5 w-5" />
-                  jake.martin@tiny-sports.org
-                </a>
-                <a
-                  href="tel:+61437218197"
-                  className="text-muted-foreground hover:text-foreground flex items-center gap-3"
-                >
-                  <Phone className="text-primary h-5 w-5" />
-                  0437 218 197
-                </a>
-                <div className="text-muted-foreground flex items-center gap-3">
-                  <MapPin className="text-primary h-5 w-5" />
-                  Australia-wide (remote)
+            <div className="lg:col-span-4">
+              <h2 className="font-heading text-xl font-bold">
+                Contact details
+              </h2>
+              <dl className="divide-border border-border mt-6 divide-y border-y">
+                <div className="py-4">
+                  <dt className="text-muted-foreground text-xs font-semibold tracking-[0.14em] uppercase">
+                    Email
+                  </dt>
+                  <dd className="mt-1">
+                    <a
+                      href="mailto:jake.martin@tiny-sports.org"
+                      className="link-teal text-sm font-medium"
+                    >
+                      jake.martin@tiny-sports.org
+                    </a>
+                  </dd>
                 </div>
-              </div>
+                <div className="py-4">
+                  <dt className="text-muted-foreground text-xs font-semibold tracking-[0.14em] uppercase">
+                    Phone
+                  </dt>
+                  <dd className="mt-1">
+                    <a
+                      href="tel:+61437218197"
+                      className="link-teal text-sm font-medium"
+                    >
+                      0437 218 197
+                    </a>
+                  </dd>
+                </div>
+                <div className="py-4">
+                  <dt className="text-muted-foreground text-xs font-semibold tracking-[0.14em] uppercase">
+                    Location
+                  </dt>
+                  <dd className="mt-1 text-sm font-medium">
+                    Australia-wide, remote
+                  </dd>
+                </div>
+              </dl>
 
               <div className="mt-8">
-                <h3 className="font-semibold">Response Time</h3>
-                <p className="text-muted-foreground mt-2 text-sm">
-                  We aim to respond within 2 business days. For urgent grant
-                  deadline queries, please note the deadline in your message.
+                <h3 className="font-heading text-sm font-bold">
+                  Response time
+                </h3>
+                <p className="text-muted-foreground mt-2 text-sm leading-6">
+                  We aim to respond within two business days. For urgent grant
+                  deadline queries, note the deadline in your message.
                 </p>
               </div>
             </div>
 
             {/* Form */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-7 lg:col-start-6">
               <ContactForm />
             </div>
           </div>

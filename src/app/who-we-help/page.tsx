@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const R2 = 'https://pub-b6f613d422474f1ea6487305aad291ed.r2.dev'
@@ -15,9 +14,9 @@ export const metadata: Metadata = {
 const profiles = [
   {
     title: 'Independent coaches',
-    subtitle: 'Operating as sole traders',
+    subtitle: 'Sole traders',
     description:
-      "If you run a coaching program as a sole trader — triathlon, cycling, swimming, athletics, team sports, martial arts, or anything else — you are almost certainly ineligible to apply for Sport and Recreation Victoria or Queensland Active Clubs grants directly. These programs require an incorporated entity. Tiny Sports is that entity.",
+      'If you run a coaching program as a sole trader, in triathlon, cycling, swimming, athletics, team sports, martial arts or anything else, you are almost certainly ineligible to apply for Sport and Recreation Victoria or Queensland Active Clubs grants directly. Those programs require an incorporated entity. Tiny Sports is that entity.',
     details: [
       'Triathlon and multisport coaches',
       'Road and track cycling coaches',
@@ -33,11 +32,11 @@ const profiles = [
     title: 'Small community sports clubs',
     subtitle: 'Limited admin capacity',
     description:
-      "Many small clubs have the volunteers, the athletes, and the programs — but not the time or expertise to write grant applications. A club secretary who is also coaching three nights a week cannot also spend 20 hours researching and writing a grant application. We do the grant work so your volunteers can focus on the sport.",
+      'Many small clubs have the volunteers, the athletes and the programs, but not the time or expertise to write grant applications. A club secretary who also coaches three nights a week cannot spend another 20 hours researching and writing an application. We do the grant work so your volunteers can focus on the sport.',
     details: [
       'Clubs with fewer than 200 members',
       'Clubs without paid administrative staff',
-      'Clubs that have never applied for a government grant before',
+      'Clubs that have never applied for a government grant',
       'Clubs that applied unsuccessfully in the past',
       'Newly incorporated clubs building their first grant track record',
     ],
@@ -46,9 +45,9 @@ const profiles = [
   },
   {
     title: 'Programs serving disadvantaged athletes',
-    subtitle: 'Removing barriers to participation',
+    subtitle: 'Removing barriers',
     description:
-      "Government grants for community sport exist to increase participation — particularly for athletes facing financial, geographic, or social barriers. Programs that work with low-income families, Indigenous communities, athletes with disabilities, or young people in under-resourced areas are exactly what these grants are designed to fund. Tiny Sports prioritises these programs.",
+      'Grants for community sport exist to increase participation, particularly for athletes facing financial, geographic or social barriers. Programs working with low-income families, Indigenous communities, athletes with disabilities, or young people in under-resourced areas are exactly what these grants are designed to fund. Tiny Sports prioritises these programs.',
     details: [
       'Programs serving athletes from low-income households',
       'Indigenous community sport programs',
@@ -67,7 +66,7 @@ const sports = [
   'Road cycling',
   'Track cycling',
   'Swimming',
-  'Running / athletics',
+  'Running and athletics',
   'Football (all codes)',
   'Netball',
   'Basketball',
@@ -77,73 +76,75 @@ const sports = [
   'Rowing',
   'Water polo',
   'Volleyball',
-  'And all other community sports',
 ]
 
 export default function WhoWeHelpPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="to-background bg-gradient-to-b from-teal-50 py-16 sm:py-24">
+      <section className="border-border border-b py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                Who we help
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-6">
+              <p className="eyebrow">Who we help</p>
+              <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
+                Locked out by structure, not by merit
               </h1>
               <p className="text-muted-foreground mt-6 text-lg leading-8">
                 Tiny Sports works with independent coaches and small community
-                sports clubs who are locked out of government grants because of
-                how they are structured — not because their programs are not
-                worthy of funding.
+                sports clubs who cannot reach government grants because of how
+                they are structured, not because their programs are unworthy of
+                funding.
               </p>
               <div className="mt-8">
                 <Button asChild size="lg">
-                  <Link href="/contact">
-                    Talk to us about your program
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  <Link href="/contact">Talk to us about your program</Link>
                 </Button>
               </div>
             </div>
-            <div className="relative mt-12 aspect-[4/3] overflow-hidden rounded-2xl shadow-xl lg:mt-0">
-              <Image
-                src={`${R2}/photos/img_0833.jpg`}
-                alt="Jarasport athletes on the beach before a triathlon event"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
+            <div className="lg:col-span-5 lg:col-start-8">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={`${R2}/photos/img_0833.jpg`}
+                  alt="Jarasport athletes on the beach before a triathlon event"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The core insight */}
-      <section className="py-16">
+      {/* The incorporation gap */}
+      <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight">
-              The incorporation gap
-            </h2>
-            <div className="text-muted-foreground mt-6 space-y-4 text-lg leading-8">
+          <div className="grid gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow">The gap</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
+                The incorporation gap
+              </h2>
+            </div>
+            <div className="text-ink/85 space-y-5 leading-8 lg:col-span-7 lg:col-start-6">
               <p>
-                Government grant programs designed for grassroots sport
-                typically require applicants to be an incorporated organisation
-                — a company, an association, or a registered body. This
-                requirement exists for good reasons: it provides accountability,
-                governance, and an entity that can enter into legal agreements.
+                Government grant programs for grassroots sport typically require
+                applicants to be incorporated: a company, an association, or a
+                registered body. The requirement exists for good reasons. It
+                provides accountability, governance, and an entity that can
+                enter into legal agreements.
               </p>
               <p>
-                The problem is that a lot of the best grassroots sport in
+                The problem is that much of the best grassroots sport in
                 Australia is run by individual coaches who never incorporated.
                 They did not need to. They just started coaching and their
-                programs grew. Now there is government funding available that
-                they cannot touch because of how they are structured, not
-                because of what they are doing.
+                programs grew. Now there is funding available that they cannot
+                touch because of how they are structured, not because of what
+                they are doing.
               </p>
-              <p>
+              <p className="text-ink font-semibold">
                 Tiny Sports closes that gap. We provide the incorporated
                 structure. The coach keeps running their program.
               </p>
@@ -153,43 +154,55 @@ export default function WhoWeHelpPage() {
       </section>
 
       {/* Profiles */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-mint py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight">
-              Three types of programs we support
+          <div className="max-w-2xl">
+            <p className="eyebrow">Three profiles</p>
+            <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight text-teal-900">
+              The programs we support
             </h2>
           </div>
-          <div className="mt-16 space-y-16">
+          <div className="mt-14 space-y-20">
             {profiles.map((profile, index) => (
               <div
                 key={profile.title}
-                className={`lg:grid lg:grid-cols-2 lg:items-start lg:gap-16 ${index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}`}
+                className={`grid gap-10 lg:grid-cols-12 lg:items-start ${
+                  index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''
+                }`}
               >
-                <div className="relative mb-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-lg lg:mb-0">
-                  <Image
-                    src={profile.image}
-                    alt={profile.imageAlt}
-                    fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
+                <div
+                  className={`lg:col-span-5 ${index % 2 === 1 ? 'lg:col-start-8' : ''}`}
+                >
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={profile.image}
+                      alt={profile.imageAlt}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 1024px) 100vw, 42vw"
+                    />
+                  </div>
                 </div>
-                <div>
-                  <p className="text-primary text-sm font-semibold tracking-wide uppercase">
-                    {profile.subtitle}
-                  </p>
-                  <h3 className="mt-2 text-2xl font-bold">{profile.title}</h3>
-                  <p className="text-muted-foreground mt-4 text-base leading-7">
+                <div
+                  className={`lg:col-span-6 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : 'lg:col-start-7'}`}
+                >
+                  <p className="eyebrow">{profile.subtitle}</p>
+                  <h3 className="font-heading mt-2 text-2xl font-bold text-teal-900">
+                    {profile.title}
+                  </h3>
+                  <p className="text-ink/85 mt-4 leading-7">
                     {profile.description}
                   </p>
-                  <ul className="mt-6 space-y-2">
+                  <ul className="divide-mint-mid border-mint-mid mt-6 divide-y border-y">
                     {profile.details.map((detail) => (
                       <li
                         key={detail}
-                        className="text-muted-foreground flex items-center gap-2 text-sm"
+                        className="text-ink/80 flex items-baseline gap-3 py-2.5 text-sm"
                       >
-                        <div className="bg-primary h-1.5 w-1.5 shrink-0 rounded-full" />
+                        <span
+                          aria-hidden
+                          className="h-1.5 w-1.5 shrink-0 bg-teal-500"
+                        />
                         {detail}
                       </li>
                     ))}
@@ -201,82 +214,89 @@ export default function WhoWeHelpPage() {
         </div>
       </section>
 
-      {/* Sports we cover */}
-      <section className="py-16">
+      {/* Sports */}
+      <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight">
-              Sports we work with
-            </h2>
-            <p className="text-muted-foreground mt-4 text-lg">
-              Tiny Sports is sport-agnostic. The grant programs we work with
-              cover all community sports. If you coach or run a club in any of
-              the following sports — or any sport not listed — we can assess
-              your eligibility.
-            </p>
-          </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-3">
-            {sports.map((sport) => (
-              <span
-                key={sport}
-                className="bg-muted text-muted-foreground rounded-full px-4 py-2 text-sm font-medium"
-              >
-                {sport}
-              </span>
-            ))}
+          <div className="grid gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow">Sport-agnostic</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
+                Sports we work with
+              </h2>
+              <p className="text-muted-foreground mt-4 leading-7">
+                The grant programs we work with cover all community sports. If
+                your sport is not listed, that is not a barrier. We can assess
+                your eligibility either way.
+              </p>
+            </div>
+            <div className="lg:col-span-7 lg:col-start-6">
+              <ul className="grid grid-cols-2 gap-x-8 sm:grid-cols-3">
+                {sports.map((sport) => (
+                  <li
+                    key={sport}
+                    className="border-border border-b py-3 text-sm font-medium"
+                  >
+                    {sport}
+                  </li>
+                ))}
+                <li className="border-border text-muted-foreground border-b py-3 text-sm font-medium">
+                  All other community sports
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Geography */}
-      <section className="bg-muted/30 py-16">
+      {/* Geography + Jarasport */}
+      <section className="border-border border-t py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-14 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Where we operate
+              <p className="eyebrow">Where we operate</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
+                Victoria and Queensland first
               </h2>
-              <div className="text-muted-foreground mt-6 space-y-4 text-lg leading-8">
+              <div className="text-ink/85 mt-6 space-y-5 leading-8">
                 <p>
                   Tiny Sports was incorporated in 2026 and is currently focused
-                  on grant programs in Victoria and Queensland, where the
-                  Sport and Recreation Victoria Sporting Club Grants Program and
-                  Sport and Recreation Queensland&apos;s Active Clubs funding
-                  are active.
+                  on grant programs in Victoria and Queensland, where the SRV
+                  Sporting Club Grants Program and Queensland&apos;s Active
+                  Clubs funding are active.
                 </p>
                 <p>
-                  Our first partner program, Jarasport, is based in Victoria.
-                  We are actively seeking partner coaches and clubs in
-                  Queensland, New South Wales, and other states.
+                  Our first partner program, Jarasport, is based in Victoria. We
+                  are actively seeking partner coaches and clubs in Queensland,
+                  New South Wales and other states.
                 </p>
                 <p>
                   Geographic scope will expand as we build our grant track
-                  record. If you are based outside Victoria or Queensland, get
-                  in touch — it is worth a conversation.
+                  record. If you are based elsewhere, get in touch anyway. It is
+                  worth a conversation.
                 </p>
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Partner spotlight: Jarasport
+              <p className="eyebrow">Founding partner</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
+                Jarasport, the proof of concept
               </h2>
-              <div className="text-muted-foreground mt-6 space-y-4 text-base leading-7">
+              <div className="text-ink/85 mt-6 space-y-5 leading-7">
                 <p>
-                  Jarasport is Tiny Sports&apos; founding partner program — a
+                  Jarasport is Tiny Sports&apos; founding partner program: a
                   triathlon and cycling coaching operation in Victoria run by
                   Coach Simon, whose athletes have competed at ITU World
                   Championships level.
                 </p>
                 <p>
-                  Coach Simon operates as a sole trader. Despite producing
-                  outstanding results at community level, Jarasport could not
-                  access Sport and Recreation Victoria grants without an
-                  incorporated partner. Tiny Sports was built to solve exactly
-                  this problem.
+                  Coach Simon operates as a sole trader. Despite outstanding
+                  results at community level, Jarasport could not access Sport
+                  and Recreation Victoria grants without an incorporated
+                  partner. Tiny Sports was built to solve exactly this problem.
                 </p>
                 <p>
-                  Jarasport is the proof of concept. We are now looking to
-                  replicate this model with coaches and clubs across Australia.
+                  We are now looking to replicate the model with coaches and
+                  clubs across Australia.
                 </p>
               </div>
             </div>
@@ -285,27 +305,31 @@ export default function WhoWeHelpPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16">
+      <section className="bg-teal-700 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-teal-50 px-8 py-16 text-center sm:px-16">
-            <h2 className="text-3xl font-bold tracking-tight">
+          <div className="max-w-3xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Does this sound like your program?
             </h2>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg">
+            <p className="mt-4 text-lg leading-8 text-teal-100">
               Get in touch. We will ask a few questions about your program and
               let you know whether there is funding available and whether Tiny
               Sports can help you access it.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg">
-                <Link href="/contact">
-                  Talk to us
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <Button
+                asChild
+                size="lg"
+                className="hover:bg-mint bg-white text-teal-800"
+              >
+                <Link href="/contact">Talk to us</Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/how-it-works">How it works</Link>
-              </Button>
+              <Link
+                href="/how-it-works"
+                className="text-sm font-semibold text-white underline-offset-4 hover:underline"
+              >
+                How it works &rarr;
+              </Link>
             </div>
           </div>
         </div>

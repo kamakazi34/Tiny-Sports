@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const R2 = 'https://pub-b6f613d422474f1ea6487305aad291ed.r2.dev'
@@ -10,11 +9,77 @@ const jsonLd = {
   '@type': 'NonprofitOrganization',
   name: 'Tiny Sports Limited',
   description:
-    'Helping Australian community sports clubs and coaches secure government grants, build capacity, and grow their programs.',
+    'Not-for-profit company that applies for and acquits government grants on behalf of Australian grassroots sports clubs and independent coaches.',
   url: 'https://tiny-sports.org',
   areaServed: 'Australia',
-  email: 'hello@tiny-sports.org',
+  email: 'jake.martin@tiny-sports.org',
 }
+
+const grantPrograms = [
+  {
+    name: 'Sporting Club Grants Program',
+    body: 'Sport and Recreation Victoria',
+    amounts: '$750 to $5,000 per category',
+    status: 'Closed. Next round expected 2027',
+    open: false,
+  },
+  {
+    name: 'Category 1: Uniforms and Equipment',
+    body: 'SRV Sporting Club Grants',
+    amounts: 'Up to $1,000',
+    status: 'Closed. Next round expected 2027',
+    open: false,
+  },
+  {
+    name: 'Category 3: Access and Events',
+    body: 'SRV Sporting Club Grants',
+    amounts: '$2,500 to $5,000',
+    status: 'Closed. Next round expected 2027',
+    open: false,
+  },
+  {
+    name: 'Category 4: Travel',
+    body: 'SRV Sporting Club Grants',
+    amounts: '$750 per athlete, up to 8',
+    status: 'Closed. Next round expected 2027',
+    open: false,
+  },
+  {
+    name: 'Active Clubs Funding',
+    body: 'Sport and Recreation Queensland',
+    amounts: 'Up to $2,500',
+    status: 'Monitoring. Next round TBA',
+    open: true,
+  },
+  {
+    name: 'Emerging Athlete Pathways',
+    body: 'Sport and Recreation Queensland',
+    amounts: 'Various',
+    status: 'Ongoing. Enquire for details',
+    open: true,
+  },
+]
+
+const compliance = [
+  {
+    title: 'Victorian Fair Play Code',
+    body: 'We adhere to and promote the Fair Play Code across every program we support. Its five principles of integrity, respect, responsibility, fairness and safety are conditions of our partner agreements.',
+    href: 'https://sport.vic.gov.au/publications-and-resources/community-sport-resources/fair-play-code',
+    linkText: 'Fair Play Code, Sport and Recreation Victoria',
+  },
+  {
+    title: 'Child Safe Standards',
+    body: 'Where participants under 18 are involved, partner organisations must have implemented the Child Safe Standards, including workforce screening and documented child safety policies. We confirm this in every application.',
+    href: 'https://ccyp.vic.gov.au/child-safe-standards',
+    linkText: 'Child Safe Standards, CCYP Victoria',
+  },
+  {
+    title: 'National Anti-Doping Policy',
+    body: 'We comply with the Australian National Anti-Doping Scheme where required, and partner organisations are expected to meet Sport Integrity Australia requirements relevant to their level of competition.',
+    href: 'https://www.sportintegrity.gov.au/what-we-do/anti-doping',
+    linkText: 'Anti-Doping, Sport Integrity Australia',
+  },
+]
 
 export default function HomePage() {
   return (
@@ -24,316 +89,274 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero Section */}
-      <section className="to-background relative overflow-hidden bg-gradient-to-b from-teal-50 py-20 sm:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                Helping community
-                <span className="text-primary"> sports clubs</span> access the
-                funding they deserve
+      {/* Hero: solid forest panel + full-bleed photo */}
+      <section className="bg-teal-700">
+        <div className="grid lg:grid-cols-[5fr_6fr]">
+          <div className="flex items-center px-4 py-16 sm:px-6 sm:py-24 lg:py-28 lg:pr-14 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))]">
+            <div className="max-w-xl">
+              <p className="eyebrow-on-dark">Not-for-profit grant partner</p>
+              <h1 className="font-heading mt-4 text-4xl leading-[1.05] font-extrabold tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+                Grant funding for the people who actually run grassroots sport
               </h1>
-              <p className="text-muted-foreground mt-6 text-lg leading-8">
-                Tiny Sports Limited is a for-purpose organisation that helps
-                Australian grassroots sports clubs and independent coaches
-                navigate government grant programs, build their capacity, and
-                grow their programs so they can focus on what matters: the
-                athletes.
+              <p className="mt-6 text-lg leading-8 text-teal-100">
+                Most community sport in Australia is run by sole-trader coaches
+                and volunteer clubs who are locked out of government grants by
+                their structure. Tiny Sports is the incorporated entity that
+                applies on their behalf, then gets the funding to the athletes.
               </p>
-              <div className="mt-10 flex items-center gap-4">
-                <Button asChild size="lg">
-                  <Link href="/how-it-works">
-                    How it works
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+              <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="hover:bg-mint bg-white text-teal-800"
+                >
+                  <Link href="/how-it-works">How it works</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/who-we-help">Who we help</Link>
-                </Button>
+                <Link
+                  href="/who-we-help"
+                  className="text-sm font-semibold text-white underline-offset-4 hover:underline"
+                >
+                  Who we help &rarr;
+                </Link>
               </div>
+              <p className="mt-10 text-xs tracking-wide text-teal-300">
+                Company Limited by Guarantee &nbsp;&middot;&nbsp; ACN 696 877
+                988
+              </p>
             </div>
-            <div className="relative mt-12 aspect-[4/3] overflow-hidden rounded-2xl shadow-xl lg:mt-0">
-              <Image
-                src={`${R2}/photos/img_0819.jpg`}
-                alt="Jarasport triathlon athletes at the Gold Coast"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
-            </div>
+          </div>
+          <div className="relative min-h-[320px] lg:min-h-[560px]">
+            <Image
+              src={`${R2}/photos/img_0819.jpg`}
+              alt="Jarasport triathlon athletes before the swim leg, Gold Coast"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+              priority
+            />
           </div>
         </div>
       </section>
 
-      {/* The Problem We Solve */}
-      <section className="py-20">
+      {/* The funding gap */}
+      <section className="border-border border-b py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
-            <div className="relative mb-10 aspect-[3/4] overflow-hidden rounded-2xl shadow-lg lg:mb-0">
-              <Image
-                src={`${R2}/photos/img_0838.jpg`}
-                alt="Two athletes at swim start with Gold Coast skyline"
-                fill
-                className="object-cover"
-                style={{ objectPosition: 'center 1%' }}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                The funding gap in grassroots sport
+          <div className="grid gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow">The problem</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                The funding is there. The eligibility is not.
               </h2>
-              <p className="text-muted-foreground mt-6 text-lg leading-8">
-                Government grants exist to support community sport but most
-                coaches and small clubs don&apos;t know they exist, don&apos;t
-                meet the eligibility criteria as sole traders, or don&apos;t
-                have the time or capacity to apply. Tiny Sports bridges that
-                gap.
+            </div>
+            <div className="lg:col-span-7 lg:col-start-6">
+              <p className="text-ink text-lg leading-8">
+                State grant programs exist to fund community sport. But if you
+                coach as a sole trader, or run a club with no incorporated
+                structure, most of those programs will not accept your
+                application. The money sits unclaimed while the programs it was
+                designed for go without.
               </p>
-              <p className="text-muted-foreground mt-4 text-lg leading-8">
-                We act as the incorporated entity that applies on behalf of
-                clubs and coaches, handling the paperwork, writing the
-                applications, and managing the acquittal so the funding gets to
-                where it&apos;s needed.
+              <p className="text-muted-foreground mt-5 text-lg leading-8">
+                Tiny Sports closes that gap. We are the incorporated
+                not-for-profit that applies, receives and acquits the grant. Our
+                partners keep doing what they do best: coaching athletes and
+                running programs. Funds are only ever released for the approved
+                purpose, under a formal partner agreement.
+              </p>
+              <p className="mt-8">
+                <Link href="/about" className="link-teal text-sm font-semibold">
+                  Read how Tiny Sports started &rarr;
+                </Link>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview Section */}
-      <section className="bg-muted/30 py-20">
+      {/* Three steps */}
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              How we help
-            </h2>
-            <p className="text-muted-foreground mt-4 text-lg">
-              Three core services for clubs and coaches at every stage.
-            </p>
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p className="eyebrow">The model</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                One partner, three steps
+              </h2>
+            </div>
+            <Link
+              href="/how-it-works"
+              className="link-teal text-sm font-semibold"
+            >
+              The full six-step process &rarr;
+            </Link>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="border-border mt-14 grid gap-y-12 border-t pt-12 md:grid-cols-3 md:gap-x-12">
             {[
               {
-                title: 'Grant Writing & Submission',
-                description:
-                  'We identify the right grant programs for your situation, write the applications, and manage the submission and acquittal process end-to-end.',
-                href: '/services#grants',
-                image: `${R2}/photos/img_2375.jpg`,
-                imageAlt: 'Athletes celebrating with medals after event',
-                imageStyle: { objectPosition: 'center 18%' },
+                n: '01',
+                title: 'You tell us about your program',
+                body: 'A conversation, not a form. We ask who your athletes are and what the funding would pay for, then check your eligibility for free.',
               },
               {
-                title: 'Eligibility & Setup',
-                description:
-                  "Many coaches and small clubs can't apply for grants directly as sole traders. We help structure your operations so funding is accessible.",
-                href: '/services#capacity',
-                image: `${R2}/photos/s0000162.jpg`,
-                imageAlt: 'Group of cyclists on beachside path',
-                imageStyle: { objectPosition: 'center center' },
+                n: '02',
+                title: 'We write and lodge the application',
+                body: 'The application goes in under Tiny Sports, the incorporated entity grant programs require. You review everything before it is submitted.',
               },
               {
-                title: 'Club Capacity Building',
-                description:
-                  'Governance, strategic planning, financial management, and compliance support — the foundations your club needs to grow sustainably.',
-                href: '/services#capacity',
-                image: `${R2}/photos/pxl_swim_pool.jpg`,
-                imageAlt: 'Swim squad training session in pool',
-                imageStyle: { objectPosition: 'center center' },
+                n: '03',
+                title: 'Funding reaches your athletes',
+                body: 'Approved funds flow to your program under a partner agreement, spent only on the approved items. We handle the acquittal reporting.',
               },
-            ].map((service) => (
-              <Link
-                key={service.title}
-                href={service.href}
-                className="group bg-card overflow-hidden rounded-xl border transition-shadow hover:shadow-md"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.imageAlt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={service.imageStyle}
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="group-hover:text-primary text-xl font-semibold">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground mt-3 text-sm">
-                    {service.description}
-                  </p>
-                </div>
-              </Link>
+            ].map((step) => (
+              <div key={step.n}>
+                <p className="font-heading text-5xl font-extrabold text-teal-200">
+                  {step.n}
+                </p>
+                <h3 className="font-heading mt-4 text-xl font-bold">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground mt-3 leading-7">
+                  {step.body}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Grant Programs We Work With */}
-      <section className="py-20">
+      {/* Full-width photo band */}
+      <section className="relative">
+        <div className="relative h-[340px] sm:h-[440px]">
+          <Image
+            src={`${R2}/photos/img_0844.jpg`}
+            alt="Athletes running into the surf at the start of a triathlon"
+            fill
+            className="object-cover"
+            style={{ objectPosition: 'center 30%' }}
+            sizes="100vw"
+          />
+        </div>
+        <p className="text-muted-foreground mx-auto max-w-7xl px-4 py-3 text-xs sm:px-6 lg:px-8">
+          Jarasport athletes at a Gold Coast triathlon. All photography on this
+          site is of real athletes from our partner programs.
+        </p>
+      </section>
+
+      {/* Grant programs table */}
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Funding landscape</p>
+            <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
               Grant programs we work with
             </h2>
-            <p className="text-muted-foreground mt-4 text-lg">
-              We work with state government grant programs across Victoria and
-              Queensland, with national coverage growing as we expand our
-              partner network.
+            <p className="text-muted-foreground mt-4 text-lg leading-8">
+              Current focus: Victorian and Queensland state programs, with
+              national coverage growing as the partner network expands. Status
+              shown as at the last review.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                name: 'Sporting Club Grants Program',
-                body: 'Sport and Recreation Victoria',
-                amounts: '$750 – $5,000 per category',
-                status: 'Closed — next round expected 2027',
-                statusColor: 'text-muted-foreground',
-              },
-              {
-                name: 'Category 1: Uniforms & Equipment',
-                body: 'SRV Sporting Club Grants',
-                amounts: 'Up to $1,000',
-                status: 'Closed — next round expected 2027',
-                statusColor: 'text-muted-foreground',
-              },
-              {
-                name: 'Category 3: Access & Events',
-                body: 'SRV Sporting Club Grants',
-                amounts: '$2,500 – $5,000',
-                status: 'Closed — next round expected 2027',
-                statusColor: 'text-muted-foreground',
-              },
-              {
-                name: 'Category 4: Travel',
-                body: 'SRV Sporting Club Grants',
-                amounts: '$750 per athlete (up to 8)',
-                status: 'Closed — next round expected 2027',
-                statusColor: 'text-muted-foreground',
-              },
-              {
-                name: 'Active Clubs Funding',
-                body: 'Sport and Recreation Queensland',
-                amounts: 'Up to $2,500',
-                status: 'Monitoring — next round TBA',
-                statusColor: 'text-amber-600',
-              },
-              {
-                name: 'Emerging Athlete Pathways',
-                body: 'Sport and Recreation Queensland',
-                amounts: 'Various',
-                status: 'Ongoing — enquire for details',
-                statusColor: 'text-amber-600',
-              },
-            ].map((grant) => (
-              <div key={grant.name} className="bg-card rounded-xl border p-6">
-                <h3 className="font-semibold">{grant.name}</h3>
-                <p className="text-muted-foreground mt-1 text-sm">
-                  {grant.body}
+          <div className="border-border mt-12 border-t">
+            {grantPrograms.map((grant) => (
+              <div
+                key={grant.name}
+                className="border-border grid gap-1 border-b py-5 sm:grid-cols-12 sm:items-baseline sm:gap-4"
+              >
+                <div className="sm:col-span-5">
+                  <h3 className="font-heading font-bold">{grant.name}</h3>
+                  <p className="text-muted-foreground text-sm">{grant.body}</p>
+                </div>
+                <p className="text-sm font-medium sm:col-span-3">
+                  {grant.amounts}
                 </p>
-                <p className="mt-3 text-sm font-medium">{grant.amounts}</p>
-                <p className={`mt-1 text-xs font-medium ${grant.statusColor}`}>
+                <p
+                  className={`text-sm sm:col-span-4 sm:text-right ${
+                    grant.open
+                      ? 'font-medium text-amber-600'
+                      : 'text-muted-foreground'
+                  }`}
+                >
                   {grant.status}
                 </p>
               </div>
             ))}
           </div>
-          <div className="mt-10 text-center">
-            <Button asChild variant="outline">
-              <Link href="/grants">
-                View all grant guides
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
+          <p className="mt-8">
+            <Link href="/grants" className="link-teal text-sm font-semibold">
+              View all grant guides &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 
-      {/* Case Study — Jarasport */}
-      <section className="bg-teal-50 py-20">
+      {/* Jarasport story */}
+      <section className="bg-mint py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
-            {/* Text */}
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
             <div>
-              <p className="text-primary text-sm font-semibold tracking-wide uppercase">
-                Why we exist
-              </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight">
-                Jarasport — the story behind Tiny Sports
+              <p className="eyebrow">Founding partner</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight text-teal-900 sm:text-4xl">
+                Jarasport is the reason Tiny Sports exists
               </h2>
-              <p className="text-muted-foreground mt-6 text-lg leading-8">
-                Jarasport is an independent coaching program based in Victoria,
-                specialising in triathlon, road cycling, and velodrome track
-                cycling. Coach Simon has developed athletes at every level from
-                first-timers to competitors at ITU Triathlon World
-                Championships.
+              <p className="text-ink mt-6 text-lg leading-8">
+                Jarasport is an independent triathlon and cycling coaching
+                program in Victoria. Coach Simon has taken athletes from their
+                first session through to ITU Triathlon World Championships.
               </p>
-              <p className="text-muted-foreground mt-4 text-lg leading-8">
-                Despite producing world-class results, Jarasport operates as a
-                sole-trader business, meaning it was locked out of Sport &amp;
-                Recreation Victoria grant programs entirely. Working with
-                Jarasport revealed the scale of this problem and became the
-                model for everything Tiny Sports does.
+              <p className="text-ink/80 mt-4 leading-8">
+                As a sole trader, Jarasport was ineligible for every Sport and
+                Recreation Victoria grant category, despite running exactly the
+                kind of community program those grants were created to fund.
+                Working through that problem with Simon became the model for
+                Tiny Sports: one incorporated entity, applying on behalf of the
+                programs that cannot.
               </p>
-              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <dl className="border-mint-mid bg-mint-mid mt-8 grid grid-cols-1 gap-px border sm:grid-cols-3">
                 {[
-                  { label: 'Sport', value: 'Triathlon & Cycling' },
+                  { label: 'Sport', value: 'Triathlon and cycling' },
                   { label: 'Location', value: 'Victoria' },
-                  {
-                    label: 'Achievement',
-                    value: 'World Championship athletes',
-                  },
+                  { label: 'Athletes at', value: 'ITU World Championships' },
                 ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-lg border bg-white px-5 py-4"
-                  >
-                    <p className="text-muted-foreground text-xs font-semibold tracking-wide uppercase">
+                  <div key={item.label} className="bg-white px-5 py-4">
+                    <dt className="text-muted-foreground text-xs font-semibold tracking-[0.14em] uppercase">
                       {item.label}
-                    </p>
-                    <p className="mt-1 font-semibold">{item.value}</p>
+                    </dt>
+                    <dd className="font-heading mt-1 text-sm font-bold">
+                      {item.value}
+                    </dd>
                   </div>
                 ))}
-              </div>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button asChild>
-                  <Link href="/contact">
-                    Partner with us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+              </dl>
+              <div className="mt-9">
+                <Button asChild size="lg">
+                  <Link href="/contact">Partner with us</Link>
                 </Button>
               </div>
             </div>
-            {/* Photos embedded in section */}
-            <div className="mt-12 space-y-3 lg:mt-0">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
+            <div className="grid gap-3">
+              <div className="relative aspect-[16/9]">
                 <Image
                   src={`${R2}/photos/img_0833.jpg`}
-                  alt="Jarasport athletes before triathlon swim start, Gold Coast"
+                  alt="Jarasport athletes on the beach before a triathlon swim start"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <div className="relative aspect-square overflow-hidden rounded-xl">
+                <div className="relative aspect-square">
                   <Image
                     src={`${R2}/photos/img_0858.jpg`}
-                    alt="Athletes running into the water at swim start"
+                    alt="Two athletes running into the surf at a swim start"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover"
                     sizes="25vw"
                   />
                 </div>
-                <div className="relative aspect-square overflow-hidden rounded-xl">
+                <div className="relative aspect-square">
                   <Image
                     src={`${R2}/photos/img_1164.jpg`}
-                    alt="Cyclist on closed road course"
+                    alt="Jarasport cyclist racing on a closed road course"
                     fill
                     className="object-cover object-bottom"
                     sizes="25vw"
@@ -345,102 +368,68 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Compliance Commitments */}
-      <section className="py-20">
+      {/* Compliance */}
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Our compliance commitments
+          <div className="max-w-2xl">
+            <p className="eyebrow">Standards</p>
+            <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+              The conditions we hold ourselves and our partners to
             </h2>
-            <p className="text-muted-foreground mt-4 text-lg">
-              Tiny Sports and all partner organisations we support adhere to
-              these standards as a condition of government grant funding.
+            <p className="text-muted-foreground mt-4 text-lg leading-8">
+              These are requirements of government grant funding, and of working
+              with us.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="bg-card rounded-xl border p-8">
-              <h3 className="text-xl font-semibold">
-                Victorian Fair Play Code
-              </h3>
-              <p className="text-muted-foreground mt-3 text-sm leading-6">
-                We adhere to and promote Victoria&apos;s Fair Play Code,
-                establishing safe, fair, and inclusive sporting environments
-                across all programs we support. The Code&apos;s five principles
-                — Integrity, Respect, Responsibility, Fairness, and Safety — are
-                embedded in our operations and those of our partner
-                organisations.
-              </p>
-              <a
-                href="https://sport.vic.gov.au/publications-and-resources/community-sport-resources/fair-play-code"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary mt-5 inline-block text-sm font-medium hover:underline"
-              >
-                Fair Play Code — Sport and Recreation Victoria →
-              </a>
-            </div>
-            <div className="bg-card rounded-xl border p-8">
-              <h3 className="text-xl font-semibold">Child Safe Standards</h3>
-              <p className="text-muted-foreground mt-3 text-sm leading-6">
-                Where participants under 18 are involved, we require partner
-                organisations to have implemented Victoria&apos;s 11 Child Safe
-                Standards — including child-focused complaints processes,
-                suitable workforce screening, and documented child safety
-                policies. We confirm compliance as part of every grant
-                application.
-              </p>
-              <a
-                href="https://ccyp.vic.gov.au/child-safe-standards"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary mt-5 inline-block text-sm font-medium hover:underline"
-              >
-                Child Safe Standards — CCYP Victoria →
-              </a>
-            </div>
-            <div className="bg-card rounded-xl border p-8">
-              <h3 className="text-xl font-semibold">
-                National Anti-Doping Policy
-              </h3>
-              <p className="text-muted-foreground mt-3 text-sm leading-6">
-                We comply with the Australian National Anti-Doping Scheme and
-                Australian National Anti-Doping Policy where required. Partner
-                organisations are expected to operate in accordance with Sport
-                Integrity Australia&apos;s anti-doping requirements relevant to
-                their level of competition.
-              </p>
-              <a
-                href="https://www.sportintegrity.gov.au/what-we-do/anti-doping"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary mt-5 inline-block text-sm font-medium hover:underline"
-              >
-                Anti-Doping — Sport Integrity Australia →
-              </a>
-            </div>
+          <div className="mt-12 grid gap-10 md:grid-cols-3">
+            {compliance.map((item) => (
+              <div key={item.title} className="border-t-2 border-teal-700 pt-6">
+                <h3 className="font-heading text-lg font-bold">{item.title}</h3>
+                <p className="text-muted-foreground mt-3 text-sm leading-6">
+                  {item.body}
+                </p>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-teal mt-4 inline-block text-sm font-semibold"
+                >
+                  {item.linkText} &rarr;
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
+      {/* Closing CTA */}
+      <section className="bg-teal-700 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-teal-50 px-8 py-16 text-center sm:px-16">
-            <h2 className="text-3xl font-bold tracking-tight">
-              Is your club or program missing out on funding?
+          <div className="max-w-3xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Is your program missing out on funding?
             </h2>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg">
-              If you coach or run a sports program in Victoria or Queensland,
-              there&apos;s a good chance funding is available that you
-              don&apos;t know about. Get in touch and we&apos;ll assess your
-              eligibility for free.
+            <p className="mt-4 text-lg leading-8 text-teal-100">
+              If you coach or run a community sports program in Victoria or
+              Queensland, there is a reasonable chance funding exists that you
+              cannot currently reach. The eligibility check is free and we will
+              give you an honest answer either way.
             </p>
-            <Button asChild size="lg" className="mt-8">
-              <Link href="/contact">
-                Check Your Eligibility
-                <ArrowRight className="ml-2 h-4 w-4" />
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <Button
+                asChild
+                size="lg"
+                className="hover:bg-mint bg-white text-teal-800"
+              >
+                <Link href="/contact">Check your eligibility</Link>
+              </Button>
+              <Link
+                href="/how-it-works"
+                className="text-sm font-semibold text-white underline-offset-4 hover:underline"
+              >
+                See the process first &rarr;
               </Link>
-            </Button>
+            </div>
           </div>
         </div>
       </section>

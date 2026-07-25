@@ -39,109 +39,115 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
   --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  --radius-2xl: calc(var(--radius) + 6px);
+  --radius-3xl: calc(var(--radius) + 8px);
+  --radius-4xl: calc(var(--radius) + 12px);
 
-  /* Tiny Sports custom colors */
-  --color-teal-50: oklch(0.97 0.02 175);
-  --color-teal-100: oklch(0.93 0.04 175);
-  --color-teal-200: oklch(0.87 0.07 175);
-  --color-teal-300: oklch(0.78 0.11 175);
-  --color-teal-400: oklch(0.68 0.14 175);
-  --color-teal-500: oklch(0.58 0.14 175);
-  --color-teal-600: oklch(0.5 0.13 175);
-  --color-teal-700: oklch(0.42 0.11 175);
-  --color-teal-800: oklch(0.35 0.09 175);
-  --color-teal-900: oklch(0.28 0.07 175);
+  /*
+   * Tiny Sports brand palette
+   * Source: Tiny Sports Brand Style Guide v1.0 (June 2026)
+   * Forest #004E3B | Emerald #005F46 | Teal #007560 | Deep #00372C
+   * Mint #E8FAF4 | Mint Mid #CDF1E6 | Ink #101828 | Muted #5D646F
+   */
+  --color-forest: #004e3b;
+  --color-deep: #00372c;
+  --color-mint: #e8faf4;
+  --color-mint-mid: #cdf1e6;
+  --color-ink: #101828;
 
-  --color-amber-50: oklch(0.97 0.03 65);
-  --color-amber-100: oklch(0.93 0.06 65);
-  --color-amber-200: oklch(0.88 0.1 65);
-  --color-amber-300: oklch(0.82 0.14 65);
-  --color-amber-400: oklch(0.78 0.16 65);
-  --color-amber-500: oklch(0.72 0.17 65);
-  --color-amber-600: oklch(0.62 0.16 65);
-  --color-amber-700: oklch(0.52 0.13 65);
+  --color-teal-50: #e8faf4;
+  --color-teal-100: #dbf5ec;
+  --color-teal-200: #cdf1e6;
+  --color-teal-300: #9adcc6;
+  --color-teal-400: #47a98d;
+  --color-teal-500: #007560;
+  --color-teal-600: #005f46;
+  --color-teal-700: #004e3b;
+  --color-teal-800: #004232;
+  --color-teal-900: #00372c;
 
-  /* Grant status colors */
-  --color-grant-open: oklch(0.6 0.15 145);
-  --color-grant-closed: oklch(0.55 0.18 25);
-  --color-grant-upcoming: oklch(0.72 0.17 65);
+  /* Alert colours: status indicators only, never decorative */
+  --color-amber-500: #e98b00;
+  --color-amber-600: #c67600;
+  --color-amber-700: #a36100;
+
+  /* Grant status colours */
+  --color-grant-open: #2e7d43;
+  --color-grant-closed: #c53637;
+  --color-grant-upcoming: #e98b00;
 }
 
 :root {
-  --radius: 0.5rem;
-  /* Teal primary */
-  --background: oklch(0.995 0 0);
-  --foreground: oklch(0.18 0.01 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.01 260);
-  --primary: oklch(0.42 0.11 175);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.01 175);
-  --secondary-foreground: oklch(0.3 0.08 175);
-  --muted: oklch(0.96 0.005 260);
-  --muted-foreground: oklch(0.5 0.02 260);
-  --accent: oklch(0.78 0.16 65);
-  --accent-foreground: oklch(0.25 0.05 65);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.005 260);
-  --input: oklch(0.92 0.005 260);
-  --ring: oklch(0.5 0.13 175);
-  --chart-1: oklch(0.5 0.13 175);
-  --chart-2: oklch(0.78 0.16 65);
-  --chart-3: oklch(0.6 0.15 145);
-  --chart-4: oklch(0.55 0.18 25);
-  --chart-5: oklch(0.65 0.12 250);
-  --sidebar: oklch(0.97 0.01 175);
-  --sidebar-foreground: oklch(0.18 0.01 260);
-  --sidebar-primary: oklch(0.42 0.11 175);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.93 0.02 175);
-  --sidebar-accent-foreground: oklch(0.3 0.08 175);
-  --sidebar-border: oklch(0.9 0.01 175);
-  --sidebar-ring: oklch(0.5 0.13 175);
+  --radius: 0.25rem;
+  --background: #ffffff;
+  --foreground: #101828;
+  --card: #ffffff;
+  --card-foreground: #101828;
+  --popover: #ffffff;
+  --popover-foreground: #101828;
+  --primary: #004e3b;
+  --primary-foreground: #ffffff;
+  --secondary: #e8faf4;
+  --secondary-foreground: #00372c;
+  --muted: #f4f6f5;
+  --muted-foreground: #5d646f;
+  --accent: #e8faf4;
+  --accent-foreground: #00372c;
+  --destructive: #c53637;
+  --border: #e3e8e6;
+  --input: #d4dcd9;
+  --ring: #007560;
+  --chart-1: #004e3b;
+  --chart-2: #007560;
+  --chart-3: #47a98d;
+  --chart-4: #e98b00;
+  --chart-5: #101828;
+  --sidebar: #f4f6f5;
+  --sidebar-foreground: #101828;
+  --sidebar-primary: #004e3b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8faf4;
+  --sidebar-accent-foreground: #00372c;
+  --sidebar-border: #e3e8e6;
+  --sidebar-ring: #007560;
 }
 
 .dark {
-  --background: oklch(0.15 0.01 260);
-  --foreground: oklch(0.97 0 0);
-  --card: oklch(0.2 0.01 260);
-  --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.2 0.01 260);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.68 0.14 175);
-  --primary-foreground: oklch(0.15 0.01 260);
-  --secondary: oklch(0.25 0.02 175);
-  --secondary-foreground: oklch(0.9 0.02 175);
-  --muted: oklch(0.25 0.01 260);
-  --muted-foreground: oklch(0.65 0.01 260);
-  --accent: oklch(0.78 0.16 65);
-  --accent-foreground: oklch(0.15 0.01 260);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.68 0.14 175);
-  --chart-1: oklch(0.68 0.14 175);
-  --chart-2: oklch(0.78 0.16 65);
-  --chart-3: oklch(0.7 0.15 145);
-  --chart-4: oklch(0.65 0.18 25);
-  --chart-5: oklch(0.72 0.12 250);
-  --sidebar: oklch(0.2 0.01 260);
-  --sidebar-foreground: oklch(0.97 0 0);
-  --sidebar-primary: oklch(0.68 0.14 175);
-  --sidebar-primary-foreground: oklch(0.97 0 0);
-  --sidebar-accent: oklch(0.25 0.02 175);
-  --sidebar-accent-foreground: oklch(0.9 0.02 175);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.68 0.14 175);
+  --background: #0c1512;
+  --foreground: #f5f8f7;
+  --card: #12201b;
+  --card-foreground: #f5f8f7;
+  --popover: #12201b;
+  --popover-foreground: #f5f8f7;
+  --primary: #9adcc6;
+  --primary-foreground: #00372c;
+  --secondary: #163028;
+  --secondary-foreground: #cdf1e6;
+  --muted: #163028;
+  --muted-foreground: #9fb0aa;
+  --accent: #163028;
+  --accent-foreground: #cdf1e6;
+  --destructive: #e05b5c;
+  --border: rgb(255 255 255 / 10%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: #47a98d;
+  --chart-1: #9adcc6;
+  --chart-2: #47a98d;
+  --chart-3: #007560;
+  --chart-4: #e98b00;
+  --chart-5: #f5f8f7;
+  --sidebar: #12201b;
+  --sidebar-foreground: #f5f8f7;
+  --sidebar-primary: #9adcc6;
+  --sidebar-primary-foreground: #00372c;
+  --sidebar-accent: #163028;
+  --sidebar-accent-foreground: #cdf1e6;
+  --sidebar-border: rgb(255 255 255 / 10%);
+  --sidebar-ring: #47a98d;
 }
 
 @layer base {
@@ -150,6 +156,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: 'ss01' on;
   }
   h1,
   h2,
@@ -158,5 +165,31 @@
   h5,
   h6 {
     font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+  ::selection {
+    background-color: #cdf1e6;
+    color: #00372c;
+  }
+}
+
+@layer components {
+  /* Uppercase kicker label above headings. Three words or fewer. */
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.16em] uppercase;
+    color: #007560;
+  }
+  .eyebrow-on-dark {
+    @apply text-xs font-semibold tracking-[0.16em] uppercase;
+    color: #9adcc6;
+  }
+  /* In-copy text links: teal, underline on hover (brand guide 9.1) */
+  .link-teal {
+    color: #007560;
+    text-decoration: none;
+  }
+  .link-teal:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 }

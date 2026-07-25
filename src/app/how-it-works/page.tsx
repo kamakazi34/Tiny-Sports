@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const R2 = 'https://pub-b6f613d422474f1ea6487305aad291ed.r2.dev'
@@ -9,7 +8,7 @@ const R2 = 'https://pub-b6f613d422474f1ea6487305aad291ed.r2.dev'
 export const metadata: Metadata = {
   title: 'How It Works',
   description:
-    'How Tiny Sports helps grassroots clubs and coaches access government grants — a simple, step-by-step guide.',
+    'How Tiny Sports helps grassroots clubs and coaches access government grants, from first conversation to acquittal.',
 }
 
 const steps = [
@@ -19,47 +18,47 @@ const steps = [
     description:
       'Get in touch and tell us about your club or coaching program. Who are your athletes? What do you need funding for? We ask a few simple questions to understand your situation.',
     detail:
-      'No formal application needed at this stage — just a conversation. We work with coaches who run community programs as sole traders, small clubs that lack the administrative resources to apply independently, and programs serving athletes who face financial barriers to participation.',
+      'No formal application at this stage, just a conversation. We work with coaches who run community programs as sole traders, small clubs without the administrative resources to apply independently, and programs serving athletes who face financial barriers to participation.',
   },
   {
     number: '02',
-    title: 'We assess your eligibility — for free',
+    title: 'We assess your eligibility, free',
     description:
-      "We review the current grant landscape and identify which programs your situation is eligible for. We'll tell you what's available, what the amounts are, and what a realistic application looks like.",
+      'We review the current grant landscape and identify which programs your situation is eligible for. We tell you what is available, the amounts, and what a realistic application looks like.',
     detail:
-      'This assessment is free and carries no obligation. We only proceed if there is a genuine funding opportunity that makes sense for your program. We will be honest if we do not think an application is likely to succeed — grant assessors are experienced readers and a weak application wastes everyone\'s time.',
+      "The assessment carries no obligation. We only proceed if there is a genuine funding opportunity that makes sense for your program, and we will say so plainly if we think an application is unlikely to succeed. Grant assessors are experienced readers and a weak application wastes everyone's time.",
   },
   {
     number: '03',
     title: 'We write the application together',
     description:
-      "You know your program. We know how to frame it for a grant assessor. We draft the application, ask you for the specific details we need — athlete numbers, budget items, program outcomes — and you review and sign off before anything is submitted.",
+      'You know your program. We know how to frame it for a grant assessor. We draft the application, ask you for the specifics we need, and you review and sign off before anything is submitted.',
     detail:
-      "The grant application is submitted in Tiny Sports' name, because Tiny Sports is the incorporated entity eligible to receive government funding. Your program is the partner that delivers the funded activity. This is the core of how the model works — your program gets the funding, Tiny Sports handles the paperwork.",
+      "The application is submitted in Tiny Sports' name, because Tiny Sports is the incorporated entity eligible to receive government funding. Your program is the partner that delivers the funded activity. Your program gets the funding, Tiny Sports handles the paperwork.",
   },
   {
     number: '04',
     title: 'Tiny Sports submits and manages the process',
     description:
-      'We lodge the application, respond to any assessor queries, and manage the process through to a decision. You do not need to interact with the grant body directly.',
+      'We lodge the application, respond to assessor queries, and manage the process through to a decision. You do not need to deal with the grant body directly.',
     detail:
-      'Government grant programs can take 6–12 weeks to assess. We track the status and keep you informed. If additional information is requested, we handle it. If the application is unsuccessful, we assess whether it is worth reapplying in the next round.',
+      'Government grant programs can take 6 to 12 weeks to assess. We track the status and keep you informed. If additional information is requested, we handle it. If the application is unsuccessful, we assess whether it is worth reapplying in the next round.',
   },
   {
     number: '05',
-    title: 'Funding approved — money reaches your program',
+    title: 'Funding approved, money reaches your program',
     description:
-      'If the application is successful, the grant funds are paid into the Tiny Sports bank account. We then disburse the money to your program under a Partner Service Agreement for the approved activity.',
+      'Grant funds are paid into the Tiny Sports bank account, then disbursed to your program under a Partner Service Agreement for the approved activity.',
     detail:
-      "The Partner Service Agreement specifies exactly what the funding is for, how it will be spent, and the timeline. Funds are only released for the approved purpose — this is a requirement of government grant programs and it protects both your program and Tiny Sports. You spend the money on the approved items and provide receipts.",
+      'The agreement specifies exactly what the funding is for, how it will be spent, and the timeline. Funds are only released for the approved purpose. This is a requirement of government grant programs and it protects both your program and Tiny Sports.',
   },
   {
     number: '06',
-    title: 'Acquittal — we handle the reporting',
+    title: 'Acquittal, we handle the reporting',
     description:
-      "Most government grants require an acquittal report after the funded activity is complete. We prepare this report, drawing on the receipts and outcome information you provide. You review it before it's submitted.",
+      'Most government grants require an acquittal report after the funded activity is complete. We prepare it from the receipts and outcomes you provide, and you review it before submission.',
     detail:
-      'A strong acquittal builds our track record with the grant body and makes future applications stronger. It also provides the evidence base for case studies and impact reporting, which helps us secure more funding for your program and others like it.',
+      'A strong acquittal builds our track record with the grant body and makes future applications stronger. It also provides the evidence base for case studies and impact reporting, which helps secure more funding for your program and others like it.',
   },
 ]
 
@@ -68,7 +67,7 @@ const eligibility = [
   'Small community sports clubs with limited admin capacity',
   'Programs serving athletes facing financial barriers to participation',
   'Clubs without existing government grant relationships',
-  'Programs in Victoria or Queensland (our current focus — expanding nationally)',
+  'Programs in Victoria or Queensland, our current focus, expanding nationally',
 ]
 
 const notEligible = [
@@ -82,68 +81,73 @@ export default function HowItWorksPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="to-background bg-gradient-to-b from-teal-50 py-16 sm:py-24">
+      <section className="border-border border-b py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-6">
+              <p className="eyebrow">The process</p>
+              <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
                 How it works
               </h1>
               <p className="text-muted-foreground mt-6 text-lg leading-8">
                 Tiny Sports acts as the incorporated entity that applies for
                 government grants on behalf of grassroots clubs and coaches who
-                can&apos;t access that funding directly. Here is what the
-                process looks like from first contact through to funded
-                outcomes.
+                cannot access that funding directly. This is the process from
+                first contact to funded outcome.
               </p>
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
                 <Button asChild size="lg">
-                  <Link href="/contact">
-                    Get started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  <Link href="/contact">Get started</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/who-we-help">Who we help</Link>
-                </Button>
+                <Link
+                  href="/who-we-help"
+                  className="link-teal text-sm font-semibold"
+                >
+                  Who we help &rarr;
+                </Link>
               </div>
             </div>
-            <div className="relative mt-12 aspect-[4/3] overflow-hidden rounded-2xl shadow-xl lg:mt-0">
-              <Image
-                src={`${R2}/photos/img_0844.jpg`}
-                alt="Athletes running into the surf at a triathlon event"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
+            <div className="lg:col-span-5 lg:col-start-8">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={`${R2}/photos/img_0844.jpg`}
+                  alt="Athletes running into the surf at a triathlon event"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The core problem */}
-      <section className="py-16">
+      {/* Why this exists */}
+      <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight">
-              Why this exists
-            </h2>
-            <div className="text-muted-foreground mt-6 space-y-4 text-lg leading-8">
+          <div className="grid gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow">Why this exists</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
+                Sole traders cannot apply. So we do.
+              </h2>
+            </div>
+            <div className="text-ink/85 space-y-5 leading-8 lg:col-span-7 lg:col-start-6">
               <p>
                 Government grants for community sport are designed to help
-                grassroots programs — but many of the coaches running those
+                grassroots programs, but many of the coaches running those
                 programs are ineligible to apply. If you operate as a sole
-                trader, most state government grant programs will not accept
-                your application. You need to be an incorporated organisation.
+                trader, most state grant programs will not accept your
+                application. You need to be an incorporated organisation.
               </p>
               <p>
                 Incorporating costs time and money, requires ongoing ASIC
-                compliance, and often isn&apos;t practical for a coach whose
-                focus is their athletes — not their paperwork. So the funding
+                compliance, and often is not practical for a coach whose focus
+                is their athletes rather than their paperwork. So the funding
                 sits unused while the programs that need it most are locked out.
               </p>
-              <p>
+              <p className="text-ink font-semibold">
                 Tiny Sports is the incorporated entity. We apply. You deliver
                 the program.
               </p>
@@ -153,41 +157,33 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Steps */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-mint py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight">
-              The process, step by step
+          <div className="max-w-2xl">
+            <p className="eyebrow">Step by step</p>
+            <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight text-teal-900">
+              From first contact to funded program
             </h2>
-            <p className="text-muted-foreground mt-4 text-lg">
-              From first contact to funded program — here is exactly what
-              happens.
-            </p>
           </div>
-          <div className="mt-16 space-y-12">
-            {steps.map((step, index) => (
+          <div className="mt-14">
+            {steps.map((step) => (
               <div
                 key={step.number}
-                className="lg:grid lg:grid-cols-[auto_1fr] lg:gap-12"
+                className="border-mint-mid grid gap-4 border-t py-10 first:border-t-0 lg:grid-cols-12 lg:gap-8"
               >
-                {/* Step number */}
-                <div className="mb-4 lg:mb-0">
-                  <div className="bg-primary flex h-16 w-16 items-center justify-center rounded-2xl">
-                    <span className="text-primary-foreground text-xl font-bold">
-                      {step.number}
-                    </span>
-                  </div>
-                  {index < steps.length - 1 && (
-                    <div className="bg-border mx-auto mt-4 hidden h-full w-px lg:block" />
-                  )}
-                </div>
-                {/* Content */}
-                <div className="bg-card rounded-xl border p-8">
-                  <h3 className="text-xl font-bold">{step.title}</h3>
-                  <p className="text-muted-foreground mt-3 text-base leading-7">
-                    {step.description}
+                <div className="lg:col-span-2">
+                  <p className="font-heading text-5xl font-extrabold text-teal-700/25">
+                    {step.number}
                   </p>
-                  <p className="text-muted-foreground mt-3 text-sm leading-6">
+                </div>
+                <div className="lg:col-span-4">
+                  <h3 className="font-heading text-xl font-bold text-teal-900">
+                    {step.title}
+                  </h3>
+                </div>
+                <div className="lg:col-span-6">
+                  <p className="text-ink leading-7">{step.description}</p>
+                  <p className="text-ink/70 mt-3 text-sm leading-6">
                     {step.detail}
                   </p>
                 </div>
@@ -198,87 +194,98 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Eligibility */}
-      <section className="py-16">
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-14 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight">
+              <p className="eyebrow">Eligibility</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
                 Who can apply
               </h2>
-              <p className="text-muted-foreground mt-4 text-lg">
-                Tiny Sports works with coaches and clubs who are doing the right
-                thing for their athletes but cannot access government funding
-                directly.
+              <p className="text-muted-foreground mt-4 leading-8">
+                We work with coaches and clubs doing the right thing for their
+                athletes who cannot access government funding directly.
               </p>
-              <ul className="mt-8 space-y-3">
+              <ul className="divide-border border-border mt-8 divide-y border-y">
                 {eligibility.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="text-primary mt-0.5 h-5 w-5 shrink-0" />
-                    <span className="text-sm leading-6">{item}</span>
+                  <li key={item} className="flex items-baseline gap-3 py-3.5">
+                    <span
+                      aria-hidden
+                      className="h-2 w-2 shrink-0 translate-y-[-1px] bg-teal-500"
+                    />
+                    <span className="leading-6">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="mt-12 lg:mt-0">
-              <h2 className="text-3xl font-bold tracking-tight">
-                Who we can&apos;t help (yet)
+            <div>
+              <p className="eyebrow">Out of scope</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
+                Who we cannot help yet
               </h2>
-              <p className="text-muted-foreground mt-4 text-lg">
-                Government grants for community sport have specific eligibility
-                criteria. Some situations fall outside what we can support.
+              <p className="text-muted-foreground mt-4 leading-8">
+                Government grants for community sport have specific criteria.
+                Some situations fall outside what we can support.
               </p>
-              <ul className="mt-8 space-y-3">
+              <ul className="divide-border border-border mt-8 divide-y border-y">
                 {notEligible.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-red-400" />
-                    <span className="text-muted-foreground text-sm leading-6">
+                  <li key={item} className="flex items-baseline gap-3 py-3.5">
+                    <span
+                      aria-hidden
+                      className="bg-border h-2 w-2 shrink-0 translate-y-[-1px]"
+                    />
+                    <span className="text-muted-foreground leading-6">
                       {item}
                     </span>
                   </li>
                 ))}
               </ul>
-              <p className="text-muted-foreground mt-6 text-sm">
-                If you&apos;re not sure whether your program is eligible, get in
-                touch. We will give you an honest answer.
+              <p className="text-muted-foreground mt-6 text-sm leading-6">
+                Not sure whether your program is eligible? Get in touch and we
+                will give you an honest answer.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Photo + CTA */}
-      <section className="bg-teal-50 py-16">
+      {/* CTA */}
+      <section className="bg-teal-700 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
-            <div className="relative mb-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-lg lg:mb-0">
-              <Image
-                src={`${R2}/photos/img_0907.jpg`}
-                alt="Cyclist on a closed road course, Gold Coast skyline in the background"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight">
+              <h2 className="font-heading text-3xl font-bold tracking-tight text-white">
                 Ready to find out what funding is available?
               </h2>
-              <p className="text-muted-foreground mt-6 text-lg leading-8">
-                The eligibility check is free. Tell us about your program and
-                we will let you know what grants exist and whether an
-                application is likely to be worth pursuing.
+              <p className="mt-5 text-lg leading-8 text-teal-100">
+                The eligibility check is free. Tell us about your program and we
+                will let you know what grants exist and whether an application
+                is worth pursuing.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button asChild size="lg">
-                  <Link href="/contact">
-                    Check your eligibility
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="hover:bg-mint bg-white text-teal-800"
+                >
+                  <Link href="/contact">Check your eligibility</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/grants">View grant programs</Link>
-                </Button>
+                <Link
+                  href="/grants"
+                  className="text-sm font-semibold text-white underline-offset-4 hover:underline"
+                >
+                  View grant programs &rarr;
+                </Link>
               </div>
+            </div>
+            <div className="relative hidden aspect-[4/3] lg:block">
+              <Image
+                src={`${R2}/photos/img_0907.jpg`}
+                alt="Cyclist on a closed road course with the Gold Coast skyline behind"
+                fill
+                className="object-cover object-center"
+                sizes="45vw"
+              />
             </div>
           </div>
         </div>

@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import { Calendar, MapPin, DollarSign } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { StatusBadge } from './status-badge'
 
 interface GrantCardProps {
@@ -35,42 +33,46 @@ export function GrantCard({
   excerpt,
 }: GrantCardProps) {
   return (
-    <Link href={`/grants/${slug}`}>
-      <Card className="h-full transition-shadow hover:shadow-md">
-        <CardHeader>
-          <div className="flex items-start justify-between gap-2">
-            <CardTitle className="text-lg leading-tight">{title}</CardTitle>
-            <StatusBadge status={status} />
-          </div>
-        </CardHeader>
-        <CardContent>
-          {excerpt && (
-            <p className="text-muted-foreground mb-4 text-sm">{excerpt}</p>
+    <Link
+      href={`/grants/${slug}`}
+      className="group border-border flex h-full flex-col border bg-white p-7 transition-colors hover:border-teal-500"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <p className="text-muted-foreground text-xs font-semibold tracking-[0.14em] uppercase">
+          {stateLabels[state] || state}
+        </p>
+        <StatusBadge status={status} />
+      </div>
+      <h3 className="font-heading mt-3 text-lg leading-snug font-bold transition-colors group-hover:text-teal-600">
+        {title}
+      </h3>
+      {excerpt && (
+        <p className="text-muted-foreground mt-3 text-sm leading-6">
+          {excerpt}
+        </p>
+      )}
+      <div className="mt-auto pt-6">
+        <dl className="border-border space-y-1.5 border-t pt-4 text-sm">
+          {amount && (
+            <div className="flex justify-between gap-4">
+              <dt className="text-muted-foreground">Amount</dt>
+              <dd className="font-medium">{amount}</dd>
+            </div>
           )}
-          <div className="text-muted-foreground flex flex-wrap gap-4 text-sm">
-            <span className="flex items-center gap-1">
-              <MapPin className="h-4 w-4" />
-              {stateLabels[state] || state}
-            </span>
-            {amount && (
-              <span className="flex items-center gap-1">
-                <DollarSign className="h-4 w-4" />
-                {amount}
-              </span>
-            )}
-            {deadline && (
-              <span className="flex items-center gap-1">
-                <Calendar className="h-4 w-4" />
+          {deadline && (
+            <div className="flex justify-between gap-4">
+              <dt className="text-muted-foreground">Deadline</dt>
+              <dd className="font-medium">
                 {new Date(deadline).toLocaleDateString('en-AU', {
                   day: 'numeric',
                   month: 'short',
                   year: 'numeric',
                 })}
-              </span>
-            )}
-          </div>
-        </CardContent>
-      </Card>
+              </dd>
+            </div>
+          )}
+        </dl>
+      </div>
     </Link>
   )
 }

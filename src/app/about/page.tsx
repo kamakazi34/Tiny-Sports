@@ -1,39 +1,35 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Image from 'next/image'
-import { Heart, Users, Target, Lightbulb } from 'lucide-react'
 
 const R2 = 'https://pub-b6f613d422474f1ea6487305aad291ed.r2.dev'
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Tiny Sports Limited — our mission to help Australian community sports clubs and independent coaches access government grants and build sustainable programs.',
+    'Tiny Sports Limited is a not-for-profit Company Limited by Guarantee that applies for government grants on behalf of Australian grassroots sports clubs and independent coaches.',
 }
 
 const values = [
   {
-    icon: Heart,
-    title: 'Athletes First',
+    title: 'Athletes first',
     description:
-      'Every decision we make is in service of the athletes and communities our partner clubs serve. Funding is a means to an end — and that end is more people playing sport.',
+      'Every decision is made in service of the athletes and communities our partner clubs serve. Funding is a means to an end, and that end is more people playing sport.',
   },
   {
-    icon: Users,
     title: 'Inclusion',
     description:
-      'Sport is for everyone. We specifically seek to support programs that remove financial barriers to participation and welcome athletes of all backgrounds and abilities.',
+      'Sport is for everyone. We prioritise programs that remove financial barriers to participation and welcome athletes of all backgrounds and abilities.',
   },
   {
-    icon: Target,
-    title: 'Practical Over Perfect',
+    title: 'Practical over perfect',
     description:
-      "We are a small, new organisation. We move fast, do the work, and learn as we go. If we can get funding to one club this month, that matters more than a perfect strategy document.",
+      'We are a small, new organisation. If we can get funding to one club this month, that matters more than a perfect strategy document.',
   },
   {
-    icon: Lightbulb,
     title: 'Transparency',
     description:
-      'We are a for-purpose organisation. Our governance documents, conflict of interest policies, and financials are available to anyone who asks.',
+      'Our governance documents, conflict of interest policies and financials are available to anyone who asks.',
   },
 ]
 
@@ -41,93 +37,103 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="to-background bg-gradient-to-b from-teal-50 py-16 sm:py-24">
+      <section className="border-border border-b py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              About Tiny Sports
+          <div className="max-w-3xl">
+            <p className="eyebrow">About Tiny Sports</p>
+            <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
+              Built to get grant funding past the eligibility wall
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              A for-purpose Company Limited by Guarantee, founded to help
-              Australian grassroots sports clubs and independent coaches access
-              the government funding they&apos;re eligible for but can&apos;t
-              reach on their own.
+              Tiny Sports Limited is a not-for-profit Company Limited by
+              Guarantee. We exist so that grassroots clubs and sole-trader
+              coaches can reach the government funding they are effectively
+              eligible for but structurally unable to apply for.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Origin Story */}
-      <section className="py-16">
+      {/* Origin story */}
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-10 lg:mb-0">
-              <Image
-                src={`${R2}/photos/img_0819.jpg`}
-                alt="Jarasport athletes at triathlon event"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          <div className="mx-auto max-w-3xl lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight">How we started</h2>
-            <div className="text-muted-foreground mt-6 space-y-4 text-lg leading-8">
-              <p>
-                Tiny Sports was founded in 2026 by Jake Martin, a sports
-                architect and community sport advocate based in Brisbane. The
-                idea came directly from working with Jarasport — a triathlon
-                coaching program in Victoria run by coach Simon, whose athletes
-                have competed at World Championship level.
-              </p>
-              <p>
-                Simon&apos;s program was doing everything right: developing
-                athletes, building community, producing results. But as a sole
-                trader, he was ineligible to apply for Sport &amp; Recreation
-                Victoria grants directly. Thousands of dollars in available
-                funding was sitting on the table, unreachable.
-              </p>
-              <p>
-                The solution was simple: set up a for-purpose organisation that could act
-                as the incorporated entity, apply for grants on behalf of clubs
-                like Jarasport, and get the funding to the athletes who needed
-                it. That&apos;s Tiny Sports.
-              </p>
-              <p>
-                We incorporated with ASIC in April 2026, governed by a
-                six-person founding board. We submitted our first grant
-                applications that same month and are now actively building our
-                partner network of coaches and clubs across Australia.
-                We&apos;re small by design and focused entirely on making the
-                grant system work for the clubs and coaches who are locked out
-                of it.
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={`${R2}/photos/img_0819.jpg`}
+                  alt="Jarasport athletes at a Gold Coast triathlon"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+              </div>
+              <p className="text-muted-foreground mt-3 text-xs">
+                Jarasport athletes, Gold Coast. The program that started it all.
               </p>
             </div>
-          </div>
+            <div className="lg:col-span-6 lg:col-start-7">
+              <p className="eyebrow">How we started</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
+                One coach, thousands of dollars out of reach
+              </h2>
+              <div className="text-ink/85 mt-6 space-y-5 leading-8">
+                <p>
+                  Tiny Sports was founded in 2026 by Jake Martin, a sports
+                  architect and community sport advocate based in Brisbane. The
+                  idea came directly from working with Jarasport, a triathlon
+                  coaching program in Victoria run by Coach Simon, whose
+                  athletes have competed at World Championship level.
+                </p>
+                <p>
+                  Simon&apos;s program was doing everything right: developing
+                  athletes, building community, producing results. But as a sole
+                  trader he was ineligible to apply for Sport and Recreation
+                  Victoria grants directly. Thousands of dollars in available
+                  funding sat on the table, unreachable.
+                </p>
+                <p>
+                  The fix was structural. Set up a not-for-profit company that
+                  can act as the incorporated entity, apply for grants on behalf
+                  of programs like Jarasport, and get the funding to the
+                  athletes who need it. That is Tiny Sports.
+                </p>
+                <p>
+                  We incorporated with ASIC in April 2026, governed by a
+                  six-person founding board, and are now building a partner
+                  network of coaches and clubs across Australia. We are small by
+                  design and focused entirely on making the grant system work
+                  for the people locked out of it.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Legal Structure */}
-      <section className="bg-muted/30 py-16">
+      {/* Structure */}
+      <section className="bg-mint py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight">Our structure</h2>
-            <div className="text-muted-foreground mt-6 space-y-4 text-lg leading-8">
+          <div className="grid gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow">Structure</p>
+              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight text-teal-900">
+                A real company, run properly
+              </h2>
+            </div>
+            <div className="text-ink/85 space-y-5 leading-8 lg:col-span-7 lg:col-start-6">
               <p>
-                Tiny Sports Limited is a Company Limited by Guarantee (CLG)
+                Tiny Sports Limited is a Company Limited by Guarantee
                 incorporated under the Corporations Act 2001 (Cth) and regulated
-                by the Australian Securities and Investments Commission (ASIC).
-                ACN 696 877 988 | ABN 43 696 877 988. We operate as a
-                for-purpose organisation — no profits are distributed to
-                directors or members.
+                by ASIC. ACN 696 877 988, ABN 43 696 877 988. No profits are
+                distributed to directors or members.
               </p>
               <p>
-                We are governed by a founding board of directors and operate
-                under a formal Constitution, Conflict of Interest Policy,
-                Financial Management Policy, and Privacy Policy. We are applying for ACNC
-                charity registration, which will unlock DGR (Deductible Gift
-                Recipient) status and tax-exempt treatment.
+                We are governed by a founding board of directors under a formal
+                Constitution, Conflict of Interest Policy, Financial Management
+                Policy and Privacy Policy. We are applying for ACNC charity
+                registration, which will unlock DGR status and tax-exempt
+                treatment.
               </p>
               <p>
                 Our registered office is in Queensland. We operate nationally,
@@ -139,58 +145,46 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16">
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-bold tracking-tight">
+          <p className="eyebrow">What we stand for</p>
+          <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight">
             Our values
           </h2>
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <div className="border-border mt-12 grid gap-x-12 gap-y-10 border-t pt-12 sm:grid-cols-2">
             {values.map((value) => (
-              <div key={value.title} className="flex gap-4">
-                <div className="bg-primary/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg">
-                  <value.icon className="text-primary h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">{value.title}</h3>
-                  <p className="text-muted-foreground mt-2">
-                    {value.description}
-                  </p>
-                </div>
+              <div key={value.title}>
+                <h3 className="font-heading text-xl font-bold">
+                  {value.title}
+                </h3>
+                <p className="text-muted-foreground mt-3 leading-7">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Board */}
-      <section className="bg-muted/30 py-16">
+      {/* Board cross-link */}
+      <section className="bg-teal-700 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight">
-              Founding board
-            </h2>
-            <p className="text-muted-foreground mt-4 text-lg">
-              Tiny Sports Limited is governed by a founding board with
-              backgrounds in technology, sport, education, architecture, and
-              community development.
-            </p>
-            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {[
-                { name: 'Jake Martin Alderman', role: 'Chairperson' },
-                { name: 'Saxon Fletcher', role: 'Director' },
-                { name: 'William Speirs', role: 'Director' },
-                { name: 'Katie Fletcher', role: 'Director' },
-                { name: 'James Pearce', role: 'Director' },
-              ].map((member) => (
-                <div
-                  key={member.name}
-                  className="bg-card rounded-lg border px-5 py-4"
-                >
-                  <p className="font-semibold">{member.name}</p>
-                  <p className="text-muted-foreground text-sm">{member.role}</p>
-                </div>
-              ))}
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <h2 className="font-heading text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                Governed by a volunteer founding board
+              </h2>
+              <p className="mt-3 leading-7 text-teal-100">
+                Backgrounds in technology, sport, education, architecture and
+                community development. No director is paid.
+              </p>
             </div>
+            <Link
+              href="/board"
+              className="shrink-0 text-sm font-semibold text-white underline-offset-4 hover:underline"
+            >
+              Meet the board &rarr;
+            </Link>
           </div>
         </div>
       </section>

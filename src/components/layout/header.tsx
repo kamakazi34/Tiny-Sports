@@ -12,50 +12,49 @@ const navigation = [
   { name: 'How It Works', href: '/how-it-works' },
   { name: 'Who We Help', href: '/who-we-help' },
   { name: 'Grants', href: '/grants' },
-  { name: 'Team', href: '/board' },
+  { name: 'Board', href: '/board' },
   { name: 'News', href: '/blog' },
   { name: 'Donate a Bike', href: '/donate-a-bike' },
-  { name: 'Contact', href: '/contact' },
 ]
 
 export function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="border-border/40 bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
+    <header className="border-border sticky top-0 z-50 w-full border-b bg-white">
+      <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-2.5">
           <Image
             src="/logo.svg"
             alt="Tiny Sports"
-            width={40}
-            height={40}
-            className="h-10 w-10"
+            width={36}
+            height={36}
+            className="h-9 w-9"
           />
-          <span className="text-primary font-heading text-xl font-bold">
+          <span className="font-heading text-lg font-extrabold tracking-tight text-teal-700">
             Tiny Sports
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-0.5 lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-muted-foreground hover:text-foreground rounded-md px-3 py-2 text-sm font-medium transition-colors"
+              className="text-ink/70 rounded-sm px-3 py-2 text-[0.9375rem] font-medium transition-colors hover:text-teal-700"
             >
               {item.name}
             </Link>
           ))}
-          <Button asChild size="sm" className="ml-2">
-            <Link href="/contact">Get in Touch</Link>
+          <Button asChild size="default" className="ml-3">
+            <Link href="/contact">Get in touch</Link>
           </Button>
         </nav>
 
         {/* Mobile nav */}
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild className="md:hidden">
+          <SheetTrigger asChild className="lg:hidden">
             <Button variant="ghost" size="icon" aria-label="Open menu">
               <Menu className="h-5 w-5" />
             </Button>
@@ -67,14 +66,14 @@ export function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-md px-3 py-3 text-base font-medium transition-colors"
+                  className="text-ink/80 hover:bg-mint rounded-sm px-3 py-3 text-base font-medium transition-colors hover:text-teal-700"
                 >
                   {item.name}
                 </Link>
               ))}
               <Button asChild className="mt-4">
                 <Link href="/contact" onClick={() => setOpen(false)}>
-                  Get in Touch
+                  Get in touch
                 </Link>
               </Button>
             </nav>

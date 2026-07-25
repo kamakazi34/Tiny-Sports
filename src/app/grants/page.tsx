@@ -21,22 +21,24 @@ export default async function GrantsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="to-background bg-gradient-to-b from-teal-50 py-16 sm:py-24">
+      <section className="border-border border-b py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Grant Guides
+          <div className="max-w-3xl">
+            <p className="eyebrow">Funding library</p>
+            <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
+              Grant guides
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Curated guides for Australian sports grants. Find the right
-              funding for your club and get step-by-step application help.
+              Plain-English guides to Australian sports grants: who is eligible,
+              what the money covers, and how to apply. Written for coaches and
+              club volunteers, not grant professionals.
             </p>
           </div>
         </div>
       </section>
 
       {/* Grant listing */}
-      <section className="py-16">
+      <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {sortedGrants.length > 0 ? (
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -54,8 +56,9 @@ export default async function GrantsPage() {
               ))}
             </div>
           ) : (
-            <p className="text-muted-foreground text-center">
-              No grant guides available yet. Check back soon!
+            <p className="text-muted-foreground">
+              No grant guides published yet. New guides are added as programs
+              open.
             </p>
           )}
         </div>

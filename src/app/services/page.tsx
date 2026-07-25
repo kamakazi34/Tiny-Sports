@@ -1,14 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  FileText,
-  Palette,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-} from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -19,10 +11,10 @@ export const metadata: Metadata = {
 const services = [
   {
     id: 'grants',
-    icon: FileText,
+    number: '01',
     title: 'Grant Writing Support',
     description:
-      'Navigate the complex world of government and corporate grants with confidence.',
+      'Finding, writing and acquitting government and corporate grants, end to end.',
     features: [
       'Grant discovery and eligibility assessment',
       'Application writing and review',
@@ -33,10 +25,10 @@ const services = [
   },
   {
     id: 'brand',
-    icon: Palette,
+    number: '02',
     title: 'Brand Development',
     description:
-      'Build a professional club identity that attracts members, sponsors, and community support.',
+      'A professional club identity that attracts members, sponsors and community support.',
     features: [
       'Logo and visual identity design guidance',
       'Social media strategy and templates',
@@ -47,10 +39,10 @@ const services = [
   },
   {
     id: 'capacity',
-    icon: TrendingUp,
+    number: '03',
     title: 'Capacity Building',
     description:
-      'Strengthen your club operations for long-term sustainability and growth.',
+      'Stronger club operations for long-term sustainability and growth.',
     features: [
       'Strategic planning workshops',
       'Governance and compliance guidance',
@@ -65,75 +57,82 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="to-background bg-gradient-to-b from-teal-50 py-16 sm:py-24">
+      <section className="border-border border-b py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Our Services
+          <div className="max-w-3xl">
+            <p className="eyebrow">Services</p>
+            <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
+              Practical support for community clubs
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Practical, hands-on support designed specifically for community
-              sports clubs. No jargon, no unnecessary complexity.
+              Hands-on help designed specifically for community sports clubs. No
+              jargon, no unnecessary complexity, and an honest answer when
+              something is not worth pursuing.
             </p>
           </div>
         </div>
       </section>
 
       {/* Services */}
-      <section className="py-16">
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
-            {services.map((service) => (
-              <div key={service.id} id={service.id} className="scroll-mt-20">
-                <Card className="overflow-hidden">
-                  <CardHeader className="bg-muted/30 pb-8">
-                    <div className="flex items-center gap-4">
-                      <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-lg">
-                        <service.icon className="text-primary h-6 w-6" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-2xl">
-                          {service.title}
-                        </CardTitle>
-                        <p className="text-muted-foreground mt-1">
-                          {service.description}
-                        </p>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-6">
-                    <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2">
-                          <CheckCircle className="text-primary mt-0.5 h-5 w-5 shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+          {services.map((service) => (
+            <div
+              key={service.id}
+              id={service.id}
+              className="border-border grid scroll-mt-24 gap-6 border-t py-12 first:border-t-0 first:pt-0 lg:grid-cols-12 lg:gap-8"
+            >
+              <div className="lg:col-span-1">
+                <p className="font-heading text-4xl font-extrabold text-teal-200">
+                  {service.number}
+                </p>
               </div>
-            ))}
-          </div>
+              <div className="lg:col-span-4">
+                <h2 className="font-heading text-2xl font-bold">
+                  {service.title}
+                </h2>
+                <p className="text-muted-foreground mt-3 leading-7">
+                  {service.description}
+                </p>
+              </div>
+              <div className="lg:col-span-6 lg:col-start-7">
+                <ul className="divide-border border-border divide-y border-y">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-baseline gap-3 py-3 text-sm"
+                    >
+                      <span
+                        aria-hidden
+                        className="h-1.5 w-1.5 shrink-0 bg-teal-500"
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-muted/30 py-16">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight">
-            Not sure where to start?
-          </h2>
-          <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg">
-            Reach out and tell us about your club. We&apos;ll help you figure
-            out the best way forward.
-          </p>
-          <Button asChild size="lg" className="mt-8">
-            <Link href="/contact">
-              Get in Touch
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+      <section className="bg-mint py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <h2 className="font-heading text-2xl font-bold tracking-tight text-teal-900 sm:text-3xl">
+                Not sure where to start?
+              </h2>
+              <p className="text-ink/80 mt-3 leading-7">
+                Tell us about your club and we will help you figure out the best
+                way forward.
+              </p>
+            </div>
+            <Button asChild size="lg" className="shrink-0">
+              <Link href="/contact">Get in touch</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
