@@ -125,8 +125,7 @@ export default function AboutPage() {
               <p>
                 Tiny Sports Limited is a Company Limited by Guarantee
                 incorporated under the Corporations Act 2001 (Cth) and regulated
-                by ASIC. ACN 696 877 988, ABN 43 696 877 988. No profits are
-                distributed to directors or members.
+                by ASIC. No profits are distributed to directors or members.
               </p>
               <p>
                 We are governed by a founding board of directors under a formal

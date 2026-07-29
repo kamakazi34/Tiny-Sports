@@ -126,7 +126,6 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Tiny Sports Limited. Company
               Limited by Guarantee.
             </p>
-            <p>ACN 696 877 988 &nbsp;|&nbsp; ABN 43 696 877 988</p>
           </div>
         </div>
       </div>

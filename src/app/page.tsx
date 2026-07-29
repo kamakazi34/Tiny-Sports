@@ -120,8 +120,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-10 text-xs tracking-wide text-teal-300">
-                Company Limited by Guarantee &nbsp;&middot;&nbsp; ACN 696 877
-                988
+                Company Limited by Guarantee
               </p>
             </div>
           </div>
