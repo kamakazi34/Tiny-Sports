@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const R2 = 'https://pub-b6f613d422474f1ea6487305aad291ed.r2.dev'
+const R2 = 'https://storage.googleapis.com/tiny-sports-assets-au'
 
 export const metadata: Metadata = {
   title: 'About',

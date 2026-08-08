@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'pub-b6f613d422474f1ea6487305aad291ed.r2.dev',
-        pathname: '/photos/**',
+        hostname: 'storage.googleapis.com',
+        pathname: '/tiny-sports-assets-au/photos/**',
       },
     ],
   },
