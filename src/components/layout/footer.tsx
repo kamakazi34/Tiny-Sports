@@ -126,6 +126,12 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Tiny Sports Limited. Company
               Limited by Guarantee.
             </p>
+            <Link
+              href="/privacy"
+              className="transition-colors hover:text-white"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </div>
