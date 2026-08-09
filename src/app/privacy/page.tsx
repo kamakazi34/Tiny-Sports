@@ -18,10 +18,9 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Tiny Sports Limited (ACN 696 877 988) is committed to
-              protecting the privacy of individuals in accordance with the
-              Privacy Act 1988 (Cth) and the Australian Privacy Principles
-              (APPs).
+              Tiny Sports Limited is committed to protecting the privacy of
+              individuals in accordance with the Privacy Act 1988 (Cth) and
+              the Australian Privacy Principles (APPs).
             </p>
             <p className="text-muted-foreground mt-2 text-sm">
               Adopted March 2026. Last updated August 2026.
@@ -44,13 +43,12 @@ export default function PrivacyPage() {
             >
               <h2>1. Introduction</h2>
               <p>
-                Tiny Sports Limited (ACN 696 877 988, ABN 43 696 877 988) is
-                an Australian not-for-profit company limited by guarantee
-                that applies for and acquits government grants on behalf of
-                grassroots sports clubs and independent coaches. This policy
-                explains how we collect, hold, use, and disclose personal
-                information in accordance with the Privacy Act 1988 (Cth) and
-                the Australian Privacy Principles (APPs).
+                Tiny Sports Limited is an Australian not-for-profit company
+                limited by guarantee that applies for and acquits government
+                grants on behalf of grassroots sports clubs and independent
+                coaches. This policy explains how we collect, hold, use, and
+                disclose personal information in accordance with the Privacy
+                Act 1988 (Cth) and the Australian Privacy Principles (APPs).
               </p>
 
               <h2>2. What Personal Information We Collect</h2>
