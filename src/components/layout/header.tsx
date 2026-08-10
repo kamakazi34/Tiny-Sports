@@ -27,13 +27,10 @@ export function Header() {
           <Image
             src="/logo.svg"
             alt="Tiny Sports"
-            width={36}
-            height={36}
-            className="h-9 w-9"
+            width={170}
+            height={32}
+            className="h-8 w-auto"
           />
-          <span className="font-heading text-lg font-extrabold tracking-tight text-teal-700">
-            Tiny Sports
-          </span>
         </Link>
 
         {/* Desktop nav */}

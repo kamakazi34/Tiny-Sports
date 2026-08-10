@@ -14,7 +14,7 @@ export default async function Image() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        backgroundColor: '#004e3b',
+        backgroundColor: '#24503f',
         padding: '80px',
       }}
     >
@@ -24,7 +24,7 @@ export default async function Image() {
           fontWeight: 700,
           letterSpacing: 4,
           textTransform: 'uppercase',
-          color: '#f47b20',
+          color: '#7fc4c9',
           marginBottom: 28,
         }}
       >
@@ -46,7 +46,7 @@ export default async function Image() {
         style={{
           fontSize: 30,
           fontWeight: 800,
-          color: '#9adcc6',
+          color: '#d8eee1',
           marginTop: 40,
         }}
       >

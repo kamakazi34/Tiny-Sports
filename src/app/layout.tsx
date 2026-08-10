@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
+import { Inter, Nunito } from 'next/font/google'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import './globals.css'
@@ -10,11 +10,16 @@ const inter = Inter({
   display: 'swap',
 })
 
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: '--font-plus-jakarta',
+const nunito = Nunito({
+  variable: '--font-nunito',
   subsets: ['latin'],
+  weight: ['600', '700', '800'],
   display: 'swap',
 })
+
+export const viewport = {
+  themeColor: '#24503f',
+}
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +29,7 @@ export const metadata: Metadata = {
   description:
     'Helping Australian community sports clubs with grant writing, brand development, and capacity building.',
   metadataBase: new URL('https://tiny-sports.org'),
+  manifest: '/site.webmanifest',
   openGraph: {
     title: 'Tiny Sports',
     description:
@@ -48,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased`}
+        className={`${inter.variable} ${nunito.variable} font-sans antialiased`}
       >
         <Header />
         <main className="min-h-[calc(100vh-4rem)]">{children}</main>

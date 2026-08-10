@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import { Reveal } from '@/components/motion/reveal'
+import { WaveDivider } from '@/components/motion/wave-divider'
 
 const R2 = 'https://storage.googleapis.com/tiny-sports-assets-au'
 
@@ -137,15 +139,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      <WaveDivider from="var(--color-teal-700)" />
+
       {/* The funding gap */}
       <section className="border-border border-b py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <p className="eyebrow">The problem</p>
-              <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-                The funding is there. The eligibility is not.
-              </h2>
+              <Reveal>
+                <p className="eyebrow">The problem</p>
+                <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                  The funding is there. The eligibility is not.
+                </h2>
+              </Reveal>
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
               <p className="text-ink text-lg leading-8">

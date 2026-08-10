@@ -30,13 +30,10 @@ export function Footer() {
               <Image
                 src="/logo-white.svg"
                 alt="Tiny Sports"
-                width={34}
-                height={34}
-                className="h-[34px] w-[34px]"
+                width={160}
+                height={30}
+                className="h-[30px] w-auto"
               />
-              <span className="font-heading text-lg font-extrabold tracking-tight">
-                Tiny Sports
-              </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-6 text-teal-200">
               A not-for-profit company that applies for and acquits government
