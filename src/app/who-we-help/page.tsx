@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 
 const R2 = 'https://storage.googleapis.com/tiny-sports-assets-au'
 
@@ -86,6 +87,7 @@ export default function WhoWeHelpPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-6">
+              <Breadcrumbs items={[{ label: 'Who We Help' }]} />
               <p className="eyebrow">Who we help</p>
               <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
                 Locked out by structure, not by merit

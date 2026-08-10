@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { reader } from '@/lib/keystatic/reader'
+import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'News & Updates',
@@ -23,6 +24,7 @@ export default async function BlogPage() {
       <section className="border-border border-b py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
+            <Breadcrumbs items={[{ label: 'News & Updates' }]} />
             <p className="eyebrow">News</p>
             <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
               News and updates

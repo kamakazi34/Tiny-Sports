@@ -24,6 +24,20 @@ export const metadata: Metadata = {
   description:
     'Helping Australian community sports clubs with grant writing, brand development, and capacity building.',
   metadataBase: new URL('https://tiny-sports.org'),
+  openGraph: {
+    title: 'Tiny Sports',
+    description:
+      'Helping Australian community sports clubs with grant writing, brand development, and capacity building.',
+    url: 'https://tiny-sports.org',
+    siteName: 'Tiny Sports',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tiny Sports',
+    description:
+      'Helping Australian community sports clubs with grant writing, brand development, and capacity building.',
+  },
 }
 
 export default function RootLayout({

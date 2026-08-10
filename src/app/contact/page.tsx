@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ContactForm } from '@/components/shared/contact-form'
+import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -14,6 +15,7 @@ export default function ContactPage() {
       <section className="border-border border-b py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
+            <Breadcrumbs items={[{ label: 'Contact' }]} />
             <p className="eyebrow">Contact</p>
             <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
               Tell us about your program

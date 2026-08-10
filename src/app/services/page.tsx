@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -60,6 +61,7 @@ export default function ServicesPage() {
       <section className="border-border border-b py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
+            <Breadcrumbs items={[{ label: 'Services' }]} />
             <p className="eyebrow">Services</p>
             <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
               Practical support for community clubs

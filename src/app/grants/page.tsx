@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { reader } from '@/lib/keystatic/reader'
 import { GrantCard } from '@/components/grants/grant-card'
+import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Grant Guides',
@@ -24,6 +25,7 @@ export default async function GrantsPage() {
       <section className="border-border border-b py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
+            <Breadcrumbs items={[{ label: 'Grant Guides' }]} />
             <p className="eyebrow">Funding library</p>
             <h1 className="font-heading mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
               Grant guides
