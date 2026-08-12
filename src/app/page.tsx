@@ -122,7 +122,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-10 text-xs tracking-wide text-teal-300">
-                Company Limited by Guarantee
+                Australian not-for-profit
               </p>
             </div>
           </div>
