@@ -8,7 +8,7 @@ const R2 = 'https://storage.googleapis.com/tiny-sports-assets-au'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Tiny Sports Limited is a not-for-profit Company Limited by Guarantee that applies for government grants on behalf of Australian grassroots sports clubs and independent coaches.',
+    'Tiny Sports Limited is an Australian not-for-profit that applies for government grants on behalf of grassroots sports clubs and independent coaches.',
 }
 
 const values = [
@@ -47,10 +47,10 @@ export default function AboutPage() {
               Built to get grant funding past the eligibility wall
             </h1>
             <p className="text-muted-foreground mt-6 text-lg leading-8">
-              Tiny Sports Limited is a not-for-profit Company Limited by
-              Guarantee. We exist so that grassroots clubs and sole-trader
-              coaches can reach the government funding they are effectively
-              eligible for but structurally unable to apply for.
+              Tiny Sports Limited is an Australian not-for-profit. We exist so
+              that grassroots clubs and sole-trader coaches can reach the
+              government funding they are effectively eligible for but
+              structurally unable to apply for.
             </p>
           </div>
         </div>
@@ -125,9 +125,9 @@ export default function AboutPage() {
             </div>
             <div className="text-ink/85 space-y-5 leading-8 lg:col-span-7 lg:col-start-6">
               <p>
-                Tiny Sports Limited is a Company Limited by Guarantee
-                incorporated under the Corporations Act 2001 (Cth) and regulated
-                by ASIC. No profits are distributed to directors or members.
+                Tiny Sports Limited is a not-for-profit company incorporated
+                under the Corporations Act 2001 (Cth) and regulated by ASIC. No
+                profits are distributed to directors or members.
               </p>
               <p>
                 We are governed by a founding board of directors under a formal

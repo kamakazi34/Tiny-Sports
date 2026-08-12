@@ -149,9 +149,9 @@ export default function BoardPage() {
             <div className="lg:col-span-7 lg:col-start-6">
               <div className="text-ink/85 space-y-5 leading-8">
                 <p>
-                  Tiny Sports Limited is a Company Limited by Guarantee
-                  incorporated under the Corporations Act 2001 (Cth). The board
-                  operates under a formal Constitution, Conflict of Interest
+                  Tiny Sports Limited is a not-for-profit company incorporated
+                  under the Corporations Act 2001 (Cth). The board operates
+                  under a formal Constitution, Conflict of Interest
                   Policy and Financial Management Policy, all available on
                   request.
                 </p>
