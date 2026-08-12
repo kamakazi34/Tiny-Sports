@@ -120,8 +120,8 @@ export function Footer() {
         <div className="mt-14 border-t border-white/15 pt-8">
           <div className="flex flex-col gap-2 text-xs leading-5 text-teal-300 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              &copy; {new Date().getFullYear()} Tiny Sports Limited. Company
-              Limited by Guarantee.
+              &copy; {new Date().getFullYear()} Tiny Sports Limited. Australian
+              not-for-profit.
             </p>
             <Link
               href="/privacy"
