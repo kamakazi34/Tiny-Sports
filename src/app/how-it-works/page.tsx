@@ -25,7 +25,7 @@ const steps = [
     number: '02',
     title: 'We assess your eligibility, free',
     description:
-      'We review the current grant landscape and identify which programs your situation is eligible for. We tell you what is available, the amounts, and what a realistic application looks like.',
+      'We review the grants currently open and identify which programs your club is eligible for. We tell you what is available, the amounts, and what a realistic application looks like.',
     detail:
       "The assessment carries no obligation. We only proceed if there is a genuine funding opportunity that makes sense for your program, and we will say so plainly if we think an application is unlikely to succeed. Grant assessors are experienced readers and a weak application wastes everyone's time.",
   },

@@ -52,7 +52,7 @@ const boardMembers = [
     role: 'Director',
     location: 'New Zealand',
     background:
-      "James brings an international perspective to the board. Based in New Zealand, he contributes experience in sport and community development, and participates remotely in board meetings. His involvement reflects Tiny Sports' commitment to drawing on diverse expertise regardless of geography.",
+      "James brings an international perspective to the board. Based in New Zealand, he contributes experience in sport and community development, and participates remotely in board meetings. Tiny Sports wants directors with different backgrounds, and where they live is not a barrier.",
     linkedin: null,
     tags: ['Sport', 'Community Development', 'International'],
   },
@@ -159,7 +159,7 @@ export default function BoardPage() {
                   Directors are required to disclose any conflicts of interest
                   and absent themselves from decisions where a conflict exists.
                   We are applying for ACNC charity registration, which will add
-                  further transparency obligations and unlock DGR status.
+                  further transparency obligations and give us DGR status.
                 </p>
               </div>
               <div className="mt-8">

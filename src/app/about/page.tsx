@@ -133,7 +133,7 @@ export default function AboutPage() {
                 We are governed by a founding board of directors under a formal
                 Constitution, Conflict of Interest Policy, Financial Management
                 Policy and Privacy Policy. We are applying for ACNC charity
-                registration, which will unlock DGR status and tax-exempt
+                registration, which will give us DGR status and tax-exempt
                 treatment.
               </p>
               <p>

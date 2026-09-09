@@ -251,7 +251,7 @@ export default function HomePage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="eyebrow">Funding landscape</p>
+            <p className="eyebrow">Where the funding is</p>
             <h2 className="font-heading mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
               Grant programs we work with
             </h2>
