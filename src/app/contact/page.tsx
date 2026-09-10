@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SocialLinks } from '@/components/social-links'
 import { ContactForm } from '@/components/shared/contact-form'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 
@@ -71,6 +72,14 @@ export default function ContactPage() {
                   </dt>
                   <dd className="mt-1 text-sm font-medium">
                     Australia-wide, remote
+                  </dd>
+                </div>
+                <div className="py-4">
+                  <dt className="text-muted-foreground text-xs font-semibold tracking-[0.14em] uppercase">
+                    Follow us
+                  </dt>
+                  <dd className="mt-2">
+                    <SocialLinks variant="light" showLabels />
                   </dd>
                 </div>
               </dl>

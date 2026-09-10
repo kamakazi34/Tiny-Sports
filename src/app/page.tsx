@@ -1,3 +1,4 @@
+import { socialLinks } from '@/lib/social'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
@@ -15,6 +16,7 @@ const jsonLd = {
   url: 'https://tiny-sports.org',
   areaServed: 'Australia',
   email: 'jake.martin@tiny-sports.org',
+  sameAs: socialLinks.map((l) => l.href),
 }
 
 const grantPrograms = [

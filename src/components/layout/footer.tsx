@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { SocialLinks } from '@/components/social-links'
 
 const footerLinks = {
   organisation: [
@@ -58,6 +59,12 @@ export function Footer() {
                 </a>
               </p>
               <p>West End, Queensland</p>
+            </div>
+            <div className="mt-6">
+              <p className="text-xs font-semibold tracking-[0.16em] text-teal-300 uppercase">
+                Follow us
+              </p>
+              <SocialLinks variant="dark" className="mt-3" />
             </div>
           </div>
 
